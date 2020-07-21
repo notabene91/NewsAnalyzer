@@ -8,10 +8,10 @@
 
 @font-face {
     font-family: 'Roboto Slab'; 
-    font-weight: 900;
+    font-weight: 700;
     font-style: normal;
-    src: url("./fonts/Robotoslabblack.woff2") format("woff2"),
-         url("./fonts/Robotoslabblack.woff") format("woff");
+    src: url("./fonts/Robotoslabbold.woff2") format("woff2"),
+         url("./fonts/Robotoslabbold.woff") format("woff");
 }
 
 @font-face {

@@ -1,0 +1,44 @@
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Что в мире творится?</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+
+<body class="page">
+  <header class="header">
+    <img src="<%=require('./images/logo.svg').default%>" alt="Логотип." class="header__logo">
+    <nav class="header__navigation">
+      <a href="" class="header__link header__link_active"></a>
+      <a href="" class="header__link"></a>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="search">
+      <h1 class="search__title"></h1>
+      <p class="search__subtitle"></p>
+      <input type="text" class="search__input">
+    </section>
+    <section class="author">
+      <img src="" alt="" class="author__photo">
+      <h2 class="author__title"></h2>
+      <p class="author__subtitle"></p>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright"></p>
+    <nav class="footer__navigation">
+      <a href="" class="footer__link"></a>
+      <a href="" class="footer__link"></a>
+      <a href="" class="footer__link"></a>
+    </nav>
+    <nav class="footer__navigation-icons">
+      <a href="" class="footer__icon"></a>
+      <a href="" class="footer__icon"></a>
+    </nav>
+  </footer>
+</body>
+  <script src="<%=htmlWebpackPlugin.files.js %>"></script>
+</html>
