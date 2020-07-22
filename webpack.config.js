@@ -8,11 +8,12 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    index: './src/index.js',
+    about: './src/about.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[contenthash].js'
   },
   module: {
     rules: [
@@ -55,17 +56,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: './src/index.html',
-      filename: 'index.html'
-    }),
-    new WebpackMd5Hash(),
-    new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
+      filename: '[name].[contenthash].css'
+    }),
+    ...['index', 'about'].map((name) => {
+      return new HtmlWebpackPlugin({
+        template: `./src/${name}.html`,
+        filename: `${name}.html`,
+        chunks: [`${name}`]
+      })
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
@@ -74,6 +73,10 @@ module.exports = {
         preset: ['default'],
       },
       canPrint: true
+    }),
+    new WebpackMd5Hash(),
+    new webpack.DefinePlugin({
+      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
   ]
 }
