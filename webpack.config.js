@@ -8,8 +8,9 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    about: './src/about.js'
+    index: './src/scripts/index.js',
+    about: './src/scripts/about.js',
+    analytics: './src/scripts/analytics.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -44,7 +45,7 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
-              esModule: false
+              esModule: false,
             },
           },
         ],
@@ -59,11 +60,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     }),
-    ...['index', 'about'].map((name) => {
+    ...['index', 'about', 'analytics'].map((name) => {
       return new HtmlWebpackPlugin({
         template: `./src/${name}.html`,
         filename: `${name}.html`,
-        chunks: [`${name}`]
+        chunks: [`${name}`],
+        favicon: './src/images/favicon.png'
       })
     }),
     new OptimizeCssAssetsPlugin({
