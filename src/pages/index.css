@@ -9,6 +9,7 @@
 
 .link {
   text-decoration: none;
+  cursor: url(../images/Pointer.png), pointer;
 }
 
 .link:focus {
@@ -44,7 +45,6 @@
 .header__link {
   color: #fff;
   margin-right: 34px;
-  cursor: url(../images/Pointer.png), pointer;
 }
 
 .header__link:last-of-type {
@@ -110,19 +110,22 @@
   border: 2px #2F71E5 solid;
 }
 
-.search__button {
+.button {
   border: 0;
-  transform: translate(-100%, 0);
   font-family: Roboto;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+  min-height: 65px;
+  cursor: url(../images/Pointer.png), pointer;
+}
+
+.search__button {
+  transform: translate(-100%, 0);
   color: #fff;
   min-width: 16.5%;
-  min-height: 65px;
   background-color: #2F71E5;
   border-radius: 100px;
-  cursor: url(../images/Pointer.png), pointer;
 }
 
 .search__button:hover {
@@ -214,6 +217,11 @@
   margin-right: 0;
 }
 
+.footer__link_icon:focus {
+  outline: solid;
+  color: #1A1B22;
+}
+
 .preloader {
   display: none;
   flex-direction: column;
@@ -254,4 +262,180 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.not-found {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 374px;
+  background: #F5F6F7;
+}
+
+.not-found_visible {
+  display: flex;
+}
+
+.not-found__title {
+  margin: 40px 0 0;
+  font-family: Roboto Slab;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+  width: 24%;
+  text-align: center;
+}
+
+.not-found__subtitle {
+  margin: 16px 0 0;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  width: 24%;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 104px;
+  background-color: #F5F6F7;
+  min-height: 974px;
+}
+
+.cards__title {
+  font-family: Roboto Slab;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+}
+
+.cards__link {
+  margin-top: 15px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+.cards__link::after {
+  content: url("data:image/svg+xml,%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.58564 7.00008L0.292743 12.293L1.70696 13.7072L8.41406 7.00008L1.70696 0.292969L0.292743 1.70718L5.58564 7.00008Z' fill='%231A1B22'/%3E%3C/svg%3E%0A");
+  margin-left: 10px;
+}
+
+.cards__link:focus {
+  color: #1A1B22;
+  text-decoration: underline;
+}
+
+.cards__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 16px;
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 16px;
+  max-height: 576px;
+}
+
+.card__image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 272px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 24px 24px;
+  max-width: 400px;
+  max-height: 304px;
+}
+
+.card__date {
+  font-family: Source Sans Pro;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  margin: 0 0 12px;
+}
+
+.card__title {
+  font-family: Roboto Slab;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+  margin: 0 0 16px;
+  max-width: 352px;
+  min-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.card__text {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+  margin: 0 0 18px;
+  max-width: 352px;
+  min-height: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.card__source {
+  font-family: Roboto Slab;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  margin: 0;
+}
+
+.cards__button {
+  background: #fff;
+  border-radius: 80px;
+  width: 20%;
+  align-self: center;
+}
+
+.cards__button:focus {
+  outline: none;
+  text-decoration: underline;
 }
