@@ -14,7 +14,6 @@
 
 .link:focus {
   outline: none;
-  color: #B6BCBF;
 }
 
 .header {
@@ -31,7 +30,7 @@
 }
 
 .header__logo {
-  margin-left: 102px;
+  margin-left: 104px;
 }
 
 .header__navigation {
@@ -43,7 +42,7 @@
 }
 
 .header__link {
-  color: #fff;
+  color: #B6BCBF;
   margin-right: 34px;
 }
 
@@ -52,8 +51,13 @@
 }
 
 .header__link_active {
+  color: #fff;
   padding-bottom: 14%;
   border-bottom: solid 3px #fff;
+}
+
+.header__link:hover {
+  color: #fff;
 }
 
 .search {
@@ -153,6 +157,8 @@
 }
 
 .author__photo {
+  width: 32%;
+  border-radius: 50%;
   margin-right: 56px;
 }
 
@@ -215,6 +221,14 @@
 
 .footer__link_icon:last-of-type {
   margin-right: 0;
+}
+
+.footer__link:hover {
+  color: #B6BCBF;
+}
+
+.footer__link:focus {
+  color: #B6BCBF;
 }
 
 .footer__link_icon:focus {
@@ -393,12 +407,12 @@
   color: #1A1B22;
   margin: 0 0 16px;
   max-width: 352px;
-  min-height: 60px;
+  min-height: 90px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
 }
 
 .card__text {
@@ -409,12 +423,12 @@
   color: #1A1B22;
   margin: 0 0 18px;
   max-width: 352px;
-  min-height: 110px;
+  min-height: 88px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
 }
 
 .card__source {
