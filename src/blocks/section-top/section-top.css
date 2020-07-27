@@ -1,0 +1,9 @@
+@import url(./__link/section-top__link.css);
+@import url(./__title/section-top__title.css);
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 52px 104px 65px;
+}

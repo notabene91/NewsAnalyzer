@@ -1,0 +1,15 @@
+.header__link_theme_white {
+  color: #B6BCBF;
+  margin-right: 34px;
+}
+
+.header__link_theme_white:hover {
+  color: #1A1B22;
+}
+
+.header__link.header__link_active.header__link_theme_white {
+  cursor: default;
+  color: #1A1B22;
+  padding-bottom: 14%;
+  border-bottom: solid 3px #1A1B22;
+}

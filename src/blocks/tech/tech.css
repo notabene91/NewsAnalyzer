@@ -1,0 +1,10 @@
+@import url(./__container/tech__container.css);
+@import url(./__image/tech__image.css);
+@import url(./__title/tech__title.css);
+
+.tech {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 214px 94px 104px;
+    background: #F5F6F7
+  }

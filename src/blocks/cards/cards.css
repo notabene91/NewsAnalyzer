@@ -1,0 +1,11 @@
+@import url(./__button/cards__button.css);
+@import url(./__list/cards__list.css);
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 0;
+  background-color: #F5F6F7;
+  min-height: 974px;
+}

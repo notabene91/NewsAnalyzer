@@ -1,7 +1,21 @@
 @import url(../vendor/fonts.css);
 @import url(../vendor/normalize.css);
+@import url(../blocks/link/link.css);
+@import url(../blocks/author/author.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/cards/cards.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/main/main.css);
+@import url(../blocks/not-found/not-found.css);
+@import url(../blocks/page/page.css);
+@import url(../blocks/preloader/preloader.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/section-top/section-top.css);
 
-.page {
+
+/* .page {
   
   max-width: 1540px;
   min-width: 320px;
@@ -470,4 +484,4 @@
 .cards__button:focus {
   outline: none;
   text-decoration: underline;
-}
+} */

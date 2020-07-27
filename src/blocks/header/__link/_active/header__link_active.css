@@ -1,0 +1,6 @@
+.header__link.header__link_active {
+  cursor: default;
+  color: #fff;
+  padding-bottom: 14%;
+  border-bottom: solid 3px #fff;
+}

@@ -1,0 +1,10 @@
+.not-found__subtitle {
+  margin: 16px 0 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  width: 22%;
+  text-align: center;
+}

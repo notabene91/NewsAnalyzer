@@ -1,0 +1,20 @@
+.search__button {
+  transform: translate(-100%, 0);
+  color: #fff;
+  min-width: 16.5%;
+  background-color: #2F71E5;
+  border-radius: 100px;
+}
+
+.search__button:hover {
+  background-color: #347EFF;
+}
+
+.search__button:focus {
+  outline: none;
+  border: 2px #B6BCBF solid;
+}
+
+.search__button:active {
+  background-color: #2A65CC;
+}

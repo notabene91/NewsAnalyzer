@@ -1,0 +1,25 @@
+@import url(./_icon/footer__link_icon.css);
+.footer__link {
+  color: #1A1B22;
+  margin-right: 43px;
+}
+
+.footer__link:last-of-type {
+  margin-right: 0;
+}
+
+.footer__link_icon {
+  margin-right: 28px;
+}
+
+.footer__link_icon:last-of-type {
+  margin-right: 0;
+}
+
+.footer__link:hover {
+  color: #B6BCBF;
+}
+
+.footer__link:focus {
+  color: #B6BCBF;
+}
