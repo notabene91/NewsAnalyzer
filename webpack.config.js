@@ -58,7 +58,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css'
+      filename: './styles/[name].[contenthash].css'
     }),
     ...['index', 'about', 'analytics'].map((name) => {
       return new HtmlWebpackPlugin({

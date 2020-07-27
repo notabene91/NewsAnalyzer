@@ -1,5 +1,12 @@
 @import url(../vendor/fonts.css);
 @import url(../vendor/normalize.css);
+.page {
+  max-width: 1540px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -30,7 +37,7 @@
 
 .header__navigation {
   margin-right: 102px;
-  font-family: Roboto;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -62,7 +69,7 @@
 
 .clients__title {
   margin: 0 0 20px;
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 40px;
   line-height: 46px;
@@ -72,7 +79,7 @@
 .clients__paragraph {
   width: 61%;
   margin: 0 0 23px;
-  font-family: Roboto;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -89,7 +96,7 @@
 .tech__title {
   margin: 0;
   width: 24%;
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 40px;
   line-height: 46px;
@@ -129,7 +136,7 @@
 
 .author__title {
   margin: 51px 0 24px 0;
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 40px;
   line-height: 46px
@@ -137,15 +144,51 @@
 
 .author__subtitle {
   margin: 0;
-  font-family: Roboto;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
 }
 
 .slider {
-  padding: 0 104px;
+  padding: 0 104px 136px;
   background-color: #F5F6F7;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: 65px;
+}
+
+.section-top__title {
+  margin: 0;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+}
+
+.section-top__link {
+  margin-top: 15px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+.section-top__link::after {
+  content: url("data:image/svg+xml,%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.58564 7.00008L0.292743 12.293L1.70696 13.7072L8.41406 7.00008L1.70696 0.292969L0.292743 1.70718L5.58564 7.00008Z' fill='%231A1B22'/%3E%3C/svg%3E%0A");
+  margin-left: 10px;
+}
+
+.section-top__link:focus {
+  color: #1A1B22;
+  text-decoration: underline;
 }
 
 .slider__container {
@@ -182,7 +225,7 @@
 
 .slider-card__date {
   margin: 0 0 16px;
-  font-family: Roboto;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
@@ -191,7 +234,7 @@
 
 .slider-card__name {
   margin: 0 0 2px;
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 26px;
   line-height: 30px;
@@ -200,7 +243,7 @@
 
 .slider-card__mail {
   margin: 0;
-  font-family: Roboto;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
@@ -217,7 +260,7 @@
 .slider-card__text {
   width: 352px;
   margin: 0;
-  font-family: Roboto;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -238,7 +281,7 @@
 }
 
 .footer__copyright {
-  font-family: Roboto;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -246,7 +289,7 @@
 }
 
 .footer__navigation {
-  font-family: Roboto;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -272,4 +315,16 @@
 .footer__link_icon:focus {
   outline: solid;
   color: #1A1B22;
+}
+
+.footer__link:hover {
+  color: #B6BCBF;
+}
+
+.footer__link:focus {
+  color: #B6BCBF;
+}
+
+.footer__icon:hover {
+  transform: scale(1.1);
 }
