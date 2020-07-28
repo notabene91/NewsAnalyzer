@@ -1,0 +1,14 @@
+@import url(./__bar/statistic__bar.css);
+@import url(./__container/statistic__container.css);
+@import url(./__count/statistic__count.css);
+@import url(./__date/statistic__date.css);
+@import url(./__head/statistic__head.css);
+@import url(./__month/statistic__month.css);
+@import url(./__paragraph/statistic__paragraph.css);
+@import url(./__percent-container/statistic__percent-container.css);
+@import url(./__percent/statistic__percent.css);
+@import url(./__title/statistic__title.css);
+.statistic {
+    background-color: #F5F6F7;
+    padding: 80px 104px;
+}

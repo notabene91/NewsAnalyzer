@@ -1,0 +1,9 @@
+.statistic__container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 8.4% 1fr;
+    grid-template-rows: repeat(7, 24px);
+    grid-row-gap: 56px;
+  }
+  

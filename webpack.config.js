@@ -62,6 +62,7 @@ module.exports = {
     }),
     ...['index', 'about', 'analytics'].map((name) => {
       return new HtmlWebpackPlugin({
+        inject: false,
         template: `./src/${name}.html`,
         filename: `${name}.html`,
         chunks: [`${name}`],

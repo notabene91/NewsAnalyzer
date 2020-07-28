@@ -1,0 +1,5 @@
+@import url(./__paragraph/asked__paragraph.css);
+@import url(./__title/asked__title.css);
+.asked {
+    padding: 40px 104px 80px;
+}

@@ -1,0 +1,16 @@
+.asked__paragraph {
+    margin: 0 0 4px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+.asked__paragraph_bold {
+    font-weight: bold;
+}
+
+.asked__paragraph:last-of-type {
+    margin: 0;
+}
