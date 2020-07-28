@@ -6,6 +6,7 @@
   padding: 24px;
   list-style-type: none;
   border-radius: 16px;
+  transition: 0.5s;
 }
 
 .swiper-pagination {
@@ -40,4 +41,8 @@
 
 .swiper-button-next {
   background-image: url('../images/next.svg');
+}
+
+.swiper-slide-duplicate-next, .swiper-slide-duplicate-prev {
+  opacity: .4;
 }
