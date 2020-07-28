@@ -6,11 +6,15 @@ Swiper.use([Navigation, Pagination]);
 let mySwiper = new Swiper(slider, {
   direction: 'horizontal',
   loop: true,
-  slidesPerView: '1',
-  spaceBetween: 20,
+  slidesPerView: 1,
+  spaceBetween: 8,
   keyboard: true,
-  centeredSlides: true, 
-  centeredSlidesBounds: true, 
+  centeredSlides: true,
+  centerInsufficientSlides: true,
+  grabCursor: true,
+  freeMode: true,
+  touchEventsTarget: 'wrapper',
+
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -22,20 +26,28 @@ let mySwiper = new Swiper(slider, {
   },
   breakpoints: {
     320: {
+      freeMode: false,
       slidesPerView: 1,
-      spaceBetween: 20
+      spaceBetween: 8,
     },
-    480: {
+    375: {
+      freeMode: true,
       slidesPerView: 1,
-      spaceBetween: 20
+      spaceBetween: 8,
     },
-    1024: {
-      slidesPerView: 2,
-      spaceBetween: 20
+    870: {
+      slidesPerView: 3,
+      spaceBetween: 16,
     },
-    1440: {
+    1020: {
+      slidesPerView: 3,
+      spaceBetween: 8,
+      freeMode: false,
+    },
+    1320: {
       slidesPerView: 4,
-      spaceBetween: 16
+      spaceBetween: 16,
+      freeMode: false,
     }
   }
 })

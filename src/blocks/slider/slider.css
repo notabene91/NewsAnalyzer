@@ -1,4 +1,11 @@
 @import url(./__container/slider__container.css);
+@import url(./__overlay/slider__overlay.css);
 .slider {
-    background-color: #F5F6F7;
+  background-color: #F5F6F7;
+}
+
+@media screen and (max-width: 320px) {
+  .slider {
+    padding: 0 16px;
+  }
 }

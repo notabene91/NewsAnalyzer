@@ -7,6 +7,6 @@
   color: #fff;
   max-width: 100%;
   height: auto;
-  background-image: url(../../images/background.jpg);
   background-size: cover;
+  background-image: url('../../images/background.jpg');
 }

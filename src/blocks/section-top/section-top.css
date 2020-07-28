@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 72px 104px 65px;
+  padding: 72px 104px 65px;
 }
 
 @media screen and (max-width: 1024px) {

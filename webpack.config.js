@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './scripts/[name].[contenthash].js'
+    filename: 'scripts/[name].[contenthash].js'
   },
   module: {
     rules: [
@@ -28,14 +28,21 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+
+          isDev ? 'style-loader'
+            : {
+              loader: MiniCssExtractPlugin.loader,
+              options: { publicPath: '../', },
+            },
+
           {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
             },
           },
-          'postcss-loader'
+          'postcss-loader',
+
         ]
       },
       {
@@ -45,6 +52,7 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
+              name: 'images/[name].[ext]',
               esModule: false,
             },
           },
@@ -52,13 +60,16 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]'
+        loader: 'file-loader?name=./vendor/[name].[ext]',
+        options: {
+          name: 'fonts/[name].[ext]'
+        }
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './styles/[name].[contenthash].css'
+      filename: 'styles/[name].[contenthash].css'
     }),
     ...['index', 'about', 'analytics'].map((name) => {
       return new HtmlWebpackPlugin({
