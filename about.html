@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -6,18 +7,22 @@
   <meta name="description" content="Сайт для поиска новостей">
   <meta name="author" content="Александр Шабалин">
   <title>NewsAnalyzer</title>
-  <link rel="stylesheet" href="about.9cecfda150a00f24ff1f.css">
-  <link rel="icon" href="[object Module]" type="image/png">
-<link rel="shortcut icon" href="favicon.png"><link href="about.9cecfda150a00f24ff1f.css" rel="stylesheet"></head>
+  <link rel="stylesheet" href="./styles/about.1b8d0df6b8845e7dbf5c.css">
+  <link rel="icon" href="./images/favicon.png" type="image/png">
+</head>
 
 <body class="page">
-  <header class="header">
+  <!-- <header class="header header_theme_white">
     <a href="./index.html" class="link header__link">
-      <img src="./images/logo-black.svg" alt="Логотип." class="header__logo">
+      <picture class="header__logo">
+        <source srcset="./images/logo-black-small.svg" alt="Логотип."
+          media="(max-width: 468px)">
+        <img src="./images/logo-black.svg" alt="Логотип.">
+      </picture>
     </a>
     <nav class="header__navigation">
-      <a href="./index.html" class="link header__link">Главная</a>
-      <a href="" class="link header__link header__link_active">О проекте </a>
+      <a href="./index.html" class="link header__link header__link_theme_white">Главная</a>
+      <a href="./about.html" class="link header__link header__link_active header__link_theme_white">О проекте </a>
     </nav>
   </header>
   <main class="main">
@@ -51,77 +56,162 @@
       <img src="./images/avatar.png" alt="Портрет автора." class="author__photo">
       <div class="author__container">
         <h2 class="author__title">Об авторе</h2>
-        <p class="author__subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы
-          занимаетесь, какими технологиями разработки владеете.
-          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
-          потенциальным заказчикам.</p>
+        <p class="author__text">Привет! Меня зовут Саша и я фронтендер. Хорошо знаю HTML и СSS, нативный JavaScript,
+          актитвно учу
+          Vue. Также умею настраивать Webpack и пользуюсь Git`ом. Обожаю БЭМ и адаптивность, а также являюсь фанатом
+          своего дела &#128521;.</p>
       </div>
-    </section>
-    <section class="commits">
-      <h2 class="commits__title"></h2>
-      <a href="" class="commits__link"></a>
-      <div class="commits__slider"></div>
-    </section>
+    </section> -->
     <section class="slider">
       <div class="section-top">
         <h2 class="section-top__title">История коммитов из GitHub</h2>
-        <a href="" class="link section-top__link">Открыть в  Github</a>
+        <a href="https://github.com/notabene91/NewsAnalyzer" target="_blank" class="link section-top__link">Открыть в
+          Github</a>
       </div>
-      <ul class="slider__container">
-        <li class="slider-card">
-          <p class="slider-card__date">14 августа, 2019</p>
-          <div class="slider-card__container">
-            <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
-            <div class="slider-card__text-container">
-              <h2 class="slider-card__name">Антон Долинин</h2>
-              <p class="slider-card__mail">anton@yandex.ru</p>
+      <div class="swiper-container">
+        <div class="slider__overlay slider__overlay_left"></div>
+        <div class="slider__overlay slider__overlay_right"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
             </div>
+            <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
+              developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
           </div>
-          <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
-            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-        </li>
-        <li class="slider-card">
-          <p class="slider-card__date">14 августа, 2019</p>
-          <div class="slider-card__container">
-            <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
-            <div class="slider-card__text-container">
-              <h2 class="slider-card__name">Антон Долинин</h2>
-              <p class="slider-card__mail">anton@yandex.ru</p>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
             </div>
+            <p class="slider-card__text">With Emmet, you can type CSS-like expressions
+              that can be dynamically parsed, and produce
+              output depending on what you type in the abb...</p>
           </div>
-          <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
-            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-        </li>
-        <li class="slider-card">
-          <p class="slider-card__date">14 августа, 2019</p>
-          <div class="slider-card__container">
-            <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
-            <div class="slider-card__text-container">
-              <h2 class="slider-card__name">Антон Долинин</h2>
-              <p class="slider-card__mail">anton@yandex.ru</p>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
             </div>
+            <p class="slider-card__text">With Emmet, you can type CSS-like expressions
+              that can be dynamically parsed, and produce
+              output depending on what you type in the abb...</p>
           </div>
-          <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
-            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-        </li>
-      </ul>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
+            </div>
+            <p class="slider-card__text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans,
+              open Tools >
+              Plugins > Available plugins and find and install Emmet plugin.</p>
+          </div>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
+            </div>
+            <p class="slider-card__text">With Emmet, you can type CSS-like expressions
+              that can be dynamically parsed, and produce
+              output depending on what you type in the abb...</p>
+          </div>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
+            </div>
+            <p class="slider-card__text">With Emmet, you can type CSS-like expressions
+              that can be dynamically parsed, and produce
+              output depending on what you type in the abb...</p>
+          </div>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
+            </div>
+            <p class="slider-card__text">With Emmet, you can type CSS-like expressions
+              that can be dynamically parsed, and produce
+              output depending on what you type in the abb...</p>
+          </div>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
+            </div>
+            <p class="slider-card__text">With Emmet, you can type CSS-like expressions
+              that can be dynamically parsed, and produce
+              output depending on what you type in the abb...</p>
+          </div>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="./images/avatar.png" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
+            </div>
+            <p class="slider-card__text">With Emmet, you can type CSS-like expressions
+              that can be dynamically parsed, and produce
+              output depending on what you type in the abb...</p>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </section>
   </main>
-  <footer class="footer">
+  <!-- <footer class="footer">
     <p class="footer__copyright">&copy; 2020. Александр Шабалин</p>
     <nav class="footer__navigation">
       <a href="./index.html" class="link footer__link">Главная</a>
       <a href="./about.html" class="link footer__link">О проекте</a>
-      <a href="" class="link footer__link">Яндекс.Практикум</a>
+      <a href="https://praktikum.yandex.ru" target="_blank" class="link footer__link">Яндекс.Практикум</a>
     </nav>
     <nav class="footer__navigation-icons">
-      <a href="" class="link footer__link footer__link_icon"><img src="./images/github.svg"
-          alt="Гитхаб." class="footer__icon"></a>
-      <a href="" class="link footer__link footer__link_icon"><img src="./images/fb.svg"
-          alt="Фэйсбук." class="footer__icon"></a>
+      <a href="https://github.com/notabene91" target="_blank" class="link footer__link footer__link_icon"><img
+          src="./images/github.svg" alt="Гитхаб." class="footer__icon"></a>
+      <a href="https://facebook.com" target="_blank" class="link footer__link footer__link_icon"><img
+          src="./images/fb.svg" alt="Фэйсбук." class="footer__icon"></a>
     </nav>
-  </footer>
-<script type="text/javascript" src="about.55ce2f8a84cfbd3e3210.js"></script></body>
-<script src="about.55ce2f8a84cfbd3e3210.js"></script>
+  </footer> -->
+
+  <script src="./scripts/about.de93f6cd91afa84f1df4.js"></script>
+</body>
 
 </html>
