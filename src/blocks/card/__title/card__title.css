@@ -13,3 +13,12 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+
+@media screen and (max-width: 890px) {
+  .card__title {
+    font-size: 22px;
+    line-height: 24px;
+    min-height: 72px;
+    margin-bottom: 10px;
+  }
+}

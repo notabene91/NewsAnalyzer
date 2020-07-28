@@ -1,6 +1,5 @@
 @import url(./_active/header__link_active.css);
 @import url(./_theme_white/header__link_theme_white.css);
-
 .header__link {
   color: #B6BCBF;
   margin-right: 34px;
@@ -23,4 +22,13 @@
 
 .header__link_theme_white:hover {
   color: #1A1B22;
+}
+
+@media screen and (max-width: 890px) {
+  .header__link.header__link_active {
+    padding-bottom: 10%;
+  }
+  .header__link.header__link_active.header__link_theme_white {
+    padding-bottom: 10%;
+  }
 }

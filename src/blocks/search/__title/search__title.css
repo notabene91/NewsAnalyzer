@@ -6,3 +6,20 @@
   font-size: 60px;
   line-height: 64px;
 }
+
+@media screen and (max-width: 910px) {
+  .search__title {
+    font-size: 50px;
+    line-height: 56px;
+    margin-top: 102px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .search__title {
+    max-width: 55%;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+}

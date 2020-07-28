@@ -5,18 +5,3 @@
 @import url(./__text-container/slider-card__text-container.css);
 @import url(./__text/slider-card__text.css);
 @import url(./__container/slider-card__container.css);
-
-.slider-card {
-    box-sizing: border-box;
-    background-color: #fff;
-    min-height: 288px;
-    max-width: 400px;
-    margin: 0 16px 0 0;
-    padding: 24px;
-    list-style-type: none;
-    border-radius: 16px;
-  }
-  
-  .slider-card:last-of-type {
-    margin-right: 0;
-  }

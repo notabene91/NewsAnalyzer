@@ -1,5 +1,11 @@
 @import url(./__paragraph/clients__paragraph.css);
 @import url(./__title/clients__title.css);
 .clients {
-    padding: 80px 0 94px 104px;
+  padding: 80px 0 94px 104px;
+}
+
+@media screen and (max-width: 890px) {
+  .clients {
+    padding: 30px 40px 40px;
+  }
 }

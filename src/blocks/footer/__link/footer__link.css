@@ -23,3 +23,9 @@
 .footer__link:focus {
   color: #B6BCBF;
 }
+
+@media screen and (max-width: 1024px) {
+  .footer__link {
+    margin-right: 14px;
+  }
+}

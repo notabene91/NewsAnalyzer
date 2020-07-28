@@ -1,9 +1,15 @@
 @import url(./__container/author__container.css);
 @import url(./__photo/author__photo.css);
-@import url(./__subtitle/author__subtitle.css);
+@import url(./__text/author__text.css);
 @import url(./__title/author__title.css);
 
 .author {
   display: flex;
   padding: 72px 0 80px 104px;
+}
+
+@media screen and (max-width: 1024px) {
+  .author {
+    padding: 40px 40px 48px;
+  }
 }

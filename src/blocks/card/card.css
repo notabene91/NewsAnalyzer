@@ -8,9 +8,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: calc((100vw - (240px))/3);
+  width: 100%;
   background-color: #fff;
   border-radius: 16px;
   max-height: 576px;
 }
-

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,17 @@
   <meta name="author" content="Александр Шабалин">
   <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
+  <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/png">
 </head>
 
 <body class="page">
   <header class="header header_theme_white">
     <a href="./index.html" class="link header__link">
-      <img src="<%=require('./images/logo-black.svg').default%>" alt="Логотип."
-        class="header__logo header__logo_theme_white">
+      <picture class="header__logo">
+        <source srcset="<%=require('./images/logo-black-small.svg').default%>" alt="Логотип."
+          media="(max-width: 468px)">
+        <img src="<%=require('./images/logo-black.svg').default%>" alt="Логотип.">
+      </picture>
     </a>
     <nav class="header__navigation">
       <a href="./index.html" class="link header__link header__link_theme_white">Главная</a>
@@ -51,7 +56,7 @@
       <img src="<%=require('./images/avatar.png').default%>" alt="Портрет автора." class="author__photo">
       <div class="author__container">
         <h2 class="author__title">Об авторе</h2>
-        <p class="author__subtitle">Привет! Меня зовут Саша и я фронтендер. Хорошо знаю HTML и СSS, нативный JavaScript,
+        <p class="author__text">Привет! Меня зовут Саша и я фронтендер. Хорошо знаю HTML и СSS, нативный JavaScript,
           актитвно учу
           Vue. Также умею настраивать Webpack и пользуюсь Git`ом. Обожаю БЭМ и адаптивность, а также являюсь фанатом
           своего дела &#128521;.</p>
@@ -63,44 +68,62 @@
         <a href="https://github.com/notabene91/NewsAnalyzer" target="_blank" class="link section-top__link">Открыть в
           Github</a>
       </div>
-      <ul class="slider__container">
-        <li class="slider-card">
-          <p class="slider-card__date">14 августа, 2019</p>
-          <div class="slider-card__container">
-            <img src="<%=require('./images/avatar.png').default%>" alt="Аватар автора." class="slider-card__avatar">
-            <div class="slider-card__text-container">
-              <h2 class="slider-card__name">Антон Долинин</h2>
-              <p class="slider-card__mail">anton@yandex.ru</p>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="<%=require('./images/avatar.png').default%>" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
             </div>
+            <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
+              developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
           </div>
-          <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
-            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-        </li>
-        <li class="slider-card">
-          <p class="slider-card__date">14 августа, 2019</p>
-          <div class="slider-card__container">
-            <img src="<%=require('./images/avatar.png').default%>" alt="Аватар автора." class="slider-card__avatar">
-            <div class="slider-card__text-container">
-              <h2 class="slider-card__name">Антон Долинин</h2>
-              <p class="slider-card__mail">anton@yandex.ru</p>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="<%=require('./images/avatar.png').default%>" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
             </div>
+            <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
+              developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
           </div>
-          <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
-            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-        </li>
-        <li class="slider-card">
-          <p class="slider-card__date">14 августа, 2019</p>
-          <div class="slider-card__container">
-            <img src="<%=require('./images/avatar.png').default%>" alt="Аватар автора." class="slider-card__avatar">
-            <div class="slider-card__text-container">
-              <h2 class="slider-card__name">Антон Долинин</h2>
-              <p class="slider-card__mail">anton@yandex.ru</p>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="<%=require('./images/avatar.png').default%>" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
             </div>
+            <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
+              developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
           </div>
-          <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
-            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-        </li>
-      </ul>
+          <div class="swiper-slide">
+            <p class="slider-card__date">14 августа, 2019</p>
+            <div class="slider-card__container">
+              <img src="<%=require('./images/avatar.png').default%>" alt="Аватар автора." class="slider-card__avatar">
+              <div class="slider-card__text-container">
+                <h2 class="slider-card__name">Антон Долинин</h2>
+                <p class="slider-card__mail">anton@yandex.ru</p>
+              </div>
+            </div>
+            <p class="slider-card__text">Emmet (formerly Zen Coding) is a web-
+              developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </section>
   </main>
   <footer class="footer">

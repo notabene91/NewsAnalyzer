@@ -1,8 +1,15 @@
 .card__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 20px 24px 24px;
   max-width: 400px;
   max-height: 304px;
 }
+
+@media screen and (max-width: 890px) {
+  .card__container {
+    padding: 14px 14px 16px;
+  }
+}
+

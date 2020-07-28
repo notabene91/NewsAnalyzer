@@ -12,3 +12,5 @@
 @import url(../blocks/main/main.css);
 @import url(../blocks/page/page.css);
 @import url(../blocks/button/button.css);
+@import url(../vendor/swiper-bundle.css);
+@import url(../vendor/swiper.css);

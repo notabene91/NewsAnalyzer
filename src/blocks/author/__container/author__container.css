@@ -2,3 +2,9 @@
   color: #1A1B22;
   width: 41%;
 }
+
+@media screen and (max-width: 1024px) {
+  .author__container {
+    width: 100%;
+  }
+}

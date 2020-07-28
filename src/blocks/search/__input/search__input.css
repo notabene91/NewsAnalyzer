@@ -21,3 +21,17 @@
   outline: none;
   border: 2px #2F71E5 solid;
 }
+
+@media screen and (max-width: 1024px) {
+  .search__input {
+    width: 74%;
+    min-height: 56px;
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .search__input {
+    margin-bottom: 48px;
+  }
+}

@@ -1,0 +1,43 @@
+.swiper-slide {
+  max-width: 400px;
+  box-sizing: border-box;
+  background-color: #fff;
+  min-height: 288px;
+  padding: 24px;
+  list-style-type: none;
+  border-radius: 16px;
+}
+
+.swiper-pagination {
+  margin: 48px 0 80px;
+  position: static;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: url(../images/Pointer.png), pointer;
+  margin-right: 8px;
+  background-color: #1A1B22;
+}
+
+.swiper-button-next:last-of-type {
+  margin-right: 0;
+}
+
+.swiper-button-prev::after, .swiper-button-next:after {
+  display: none;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  cursor: url(../images/Pointer.png), pointer;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+}
+
+.swiper-button-prev {
+  background-image: url('../images/prev.svg');
+}
+
+.swiper-button-next {
+  background-image: url('../images/next.svg');
+}

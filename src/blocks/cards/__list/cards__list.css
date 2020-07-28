@@ -1,7 +1,27 @@
 .cards__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 0 104px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 16px;
   margin-bottom: 65px;
-  padding: 0 104px;
+}
+
+@media screen and (max-width: 1439px) {
+  .cards__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cards__list {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .cards__list {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 40px;
+    margin-bottom: 26px;
+  }
 }

@@ -8,13 +8,17 @@
   <meta name="author" content="Александр Шабалин">
   <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+  <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/png">
 </head>
 
 <body class="page">
   <header class="header header_theme_white">
     <a href="./index.html" class="link header__link">
-      <img src="<%=require('./images/logo-black.svg').default%>" alt="Логотип."
-        class="header__logo header__logo_theme_white">
+      <picture class="header__logo">
+        <source srcset="<%=require('./images/logo-black-small.svg').default%>" alt="Логотип."
+          media="(max-width: 468px)">
+        <img src="<%=require('./images/logo-black.svg').default%>" alt="Логотип.">
+      </picture>
     </a>
     <nav class="header__navigation">
       <a href="./index.html" class="link header__link header__link_theme_white">Главная</a>

@@ -5,3 +5,10 @@
   font-size: 18px;
   line-height: 24px;
 }
+
+
+@media screen and (max-width: 890px) {
+  .header__navigation {
+    margin-right: 40px;
+  }
+}
