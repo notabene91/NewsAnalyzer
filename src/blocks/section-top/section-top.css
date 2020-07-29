@@ -1,0 +1,21 @@
+@import url(./__link/section-top__link.css);
+@import url(./__title/section-top__title.css);
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 72px 104px 65px;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-top {
+    padding: 50px 40px 26px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section-top {
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+}

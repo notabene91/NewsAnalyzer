@@ -1,0 +1,43 @@
+.search__button {
+  position: absolute;
+  transform: translate(-100%, 0);
+  color: #fff;
+  min-width: 11.7%;
+  background-color: #2F71E5;
+  border-radius: 100px;
+}
+
+.search__button:hover {
+  background-color: #347EFF;
+}
+
+.search__button:focus {
+  outline: none;
+  border: 2px #B6BCBF solid;
+}
+
+.search__button:active {
+  background-color: #2A65CC;
+}
+
+@media screen and (max-width: 1024px) {
+  .search__button {
+    min-height: 57px;
+    min-width: 16.4%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .search__button {
+    min-width: 20.4%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .search__button {
+    position: static;
+    transform: translate(0, 0);
+    min-width: 95%;
+    margin-bottom: 30px;
+  }
+}

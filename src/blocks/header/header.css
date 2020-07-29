@@ -1,0 +1,28 @@
+@import url(./__link/header__link.css);
+@import url(./__logo/header__logo.css);
+@import url(./__navigation/header__navigation.css);
+@import url(./_theme_white/header_theme_white.css);
+.header {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+  min-height: 76px;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 890px) {
+  .header {
+    min-height: 63px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    min-height: 56px;
+  }
+}

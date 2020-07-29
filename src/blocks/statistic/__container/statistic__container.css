@@ -1,0 +1,23 @@
+.statistic__container {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 4.4% 1fr;
+  grid-template-rows: repeat(7, 24px);
+  grid-row-gap: 56px;
+  grid-column-gap: 50px;
+}
+
+@media screen and (max-width: 890px) {
+  .statistic__container {
+    grid-column-gap: 56px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .statistic__container {
+    grid-template-columns: 20% 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+}

@@ -1,0 +1,40 @@
+.author__container {
+  color: #1A1B22;
+  width: 41%;
+}
+
+@media screen and (max-width: 1024px) {
+  .author__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .author__container {
+    margin-top: 268px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .author__container {
+    margin-top: 230px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .author__container {
+    margin-top: 260px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .author__container {
+    margin-top: 230px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .author__container {
+    margin-top: 208px;
+  }
+}

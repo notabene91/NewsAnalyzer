@@ -1,0 +1,27 @@
+@import url(./__container/tech__container.css);
+@import url(./__image/tech__image.css);
+@import url(./__title/tech__title.css);
+.tech {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 104px 104px;
+  background: #F5F6F7
+}
+
+@media screen and (max-width: 1124px) {
+  .tech {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .tech {
+    padding: 50px 40px 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tech {
+    padding: 16px;
+  }
+}

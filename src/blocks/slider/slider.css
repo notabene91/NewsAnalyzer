@@ -1,0 +1,8 @@
+@import url(./__container/slider__container.css);
+@import url(./__overlay/slider__overlay.css);
+@import url(./__button/slider__button.css);
+.slider {
+  background-color: #F5F6F7;
+  display: flex;
+  flex-direction: column;
+}

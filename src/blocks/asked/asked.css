@@ -1,0 +1,17 @@
+@import url(./__paragraph/asked__paragraph.css);
+@import url(./__title/asked__title.css);
+.asked {
+  padding: 40px 104px 80px;
+}
+
+@media screen and (max-width: 890px) {
+  .asked {
+    padding: 22px 40px 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .asked {
+    padding: 16px 16px 30px;
+  }
+}

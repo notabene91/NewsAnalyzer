@@ -1,0 +1,17 @@
+.cards__button {
+  background: #fff;
+  border-radius: 80px;
+  width: 20%;
+  align-self: center;
+}
+
+.cards__button:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 550px) {
+  .cards__button {
+    width: 90%;
+  }
+}

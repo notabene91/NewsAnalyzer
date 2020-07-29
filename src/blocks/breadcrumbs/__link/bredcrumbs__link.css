@@ -1,0 +1,26 @@
+.breadcrumbs__link {
+    color: #1A1B22;
+}
+
+.breadcrumbs__link:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs__link::after {
+    content: '/';
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.breadcrumbs__link:hover::after {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.breadcrumbs__link_current {
+    color: #B6BCBF;
+}
+
+.breadcrumbs__link_current::after {
+    content: '';
+}

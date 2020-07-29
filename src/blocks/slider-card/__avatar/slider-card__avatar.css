@@ -1,0 +1,13 @@
+.slider-card__avatar {
+  margin: 0 16px 16px 0;
+  width: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 970px) {
+  .slider-card__avatar {
+    width: 48px;
+    margin: 0 12px 12px 0;
+  }
+}

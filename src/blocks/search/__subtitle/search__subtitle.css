@@ -1,0 +1,37 @@
+.search__subtitle {
+  margin: 0 0 64px 0;
+  max-width: 55%;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 1440px) {
+  .search__subtitle {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .search__subtitle {
+    max-width: 452px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .search__subtitle {
+    max-width: 452px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .search__subtitle {
+    max-width: 98%;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 64px;
+  }
+
+}

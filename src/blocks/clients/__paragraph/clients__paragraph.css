@@ -1,0 +1,18 @@
+.clients__paragraph {
+  width: 61%;
+  margin: 0 0 23px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+.clients__paragraph:last-of-type {
+  margin: 0;
+}
+  @media screen and (max-width: 890px) {
+    .clients__paragraph {
+      width: 100%;
+    }
+  }

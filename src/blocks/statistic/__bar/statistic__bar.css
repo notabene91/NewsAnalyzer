@@ -1,0 +1,6 @@
+.statistic__bar {
+    display: flex;
+    align-items: center;
+    background: #2F71E5;
+    width: 50%;
+  }
