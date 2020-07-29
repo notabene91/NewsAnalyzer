@@ -35,9 +35,10 @@ let mySwiper = new Swiper(slider, {
       slidesPerView: 1,
       spaceBetween: 8,
     },
-    870: {
-      slidesPerView: 3,
-      spaceBetween: 16,
+    550: {
+      freeMode: true,
+      slidesPerView: 2,
+      spaceBetween: 8,
     },
     1020: {
       slidesPerView: 3,

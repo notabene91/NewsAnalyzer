@@ -1,5 +1,11 @@
 .statistic__percent-container {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 108px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 108px;
+}
+
+@media screen and (max-width: 550px) {
+  .statistic__percent-container {
+    display: none;
   }
+}

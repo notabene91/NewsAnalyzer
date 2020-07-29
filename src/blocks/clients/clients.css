@@ -9,3 +9,9 @@
     padding: 30px 40px 40px;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .clients {
+    padding: 16px;
+  }
+}

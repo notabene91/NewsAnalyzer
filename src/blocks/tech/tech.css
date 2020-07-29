@@ -4,7 +4,7 @@
 .tech {
   display: flex;
   justify-content: space-between;
-  padding: 70px 104px 104px;
+  padding: 90px 104px 104px;
   background: #F5F6F7
 }
 
@@ -16,6 +16,12 @@
 
 @media screen and (max-width: 890px) {
   .tech {
-    padding: 40px;
+    padding: 50px 40px 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tech {
+    padding: 16px;
   }
 }

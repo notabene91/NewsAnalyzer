@@ -12,6 +12,12 @@
 
 @media screen and (max-width: 890px) {
   .breadcrumbs {
-    margin-bottom: 62px;
+    margin-bottom: 65px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .breadcrumbs {
+    display: none;
   }
 }

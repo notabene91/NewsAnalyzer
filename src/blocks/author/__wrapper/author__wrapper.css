@@ -1,9 +1,9 @@
 .author__wrapper {
   align-self: center;
-  padding-top: 56.25%;
-  width: 32.8%;
+  padding-top: 34%;
+  width: 34%;
   position: relative;
-  margin-right: 56px;
+  margin-right: 80px;
 }
 
 @media screen and (max-width: 1024px) {

@@ -2,18 +2,19 @@
   display: flex;
   justify-content: space-between;
   margin-top: 12px;
-  margin-right: 8.3%;
+  margin-right: 9%;
 }
 
-
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 890px) {
   .tech__container {
-    margin-right: 4%;
+    margin-right: 0;
+    margin-top: 24px;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 690px) {
   .tech__container {
-    margin-right: 0;
+    flex-wrap: wrap;
+    padding: 56px 16px 16px;
   }
 }

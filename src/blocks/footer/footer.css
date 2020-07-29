@@ -3,17 +3,18 @@
 @import url(./__navigation/footer__navigation.css);
 @import url(./__icon/footer__icon.css);
 .footer {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 80px;
-  padding: 0 104px 0;
+  padding: 24px 104px;
 }
 
 @media screen and (max-width: 1024px) {
   .footer {
-    min-height: 63px;
-    padding: 12px 40px;
+    min-height: 64px;
+    padding: 24px 40px;
   }
 }
 

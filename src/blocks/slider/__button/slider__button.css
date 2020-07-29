@@ -1,0 +1,20 @@
+.slider__button {
+  display: none;
+  box-sizing: border-box;
+  border-radius: 80px;
+  border: 1px solid #1A1B22 !important;
+  width: 90%;
+}
+
+.slider__button:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+@media screen and (max-width: 425px) {
+  .slider__button {
+    display: inline-block;
+    align-self: center;
+    margin-bottom: 32px;
+  }
+}

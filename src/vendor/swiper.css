@@ -1,5 +1,5 @@
 .swiper-slide {
-  max-width: 400px;
+  width: 400px;
   box-sizing: border-box;
   background-color: #fff;
   height: 288px;
@@ -44,7 +44,7 @@
   background-image: url('../images/next.svg');
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1062px) {
   .swiper-button-prev, .swiper-button-next {
     display: none;
   }
@@ -52,16 +52,19 @@
 
 @media screen and (max-width: 970px) {
   .swiper-slide {
-    max-width: 336px;
+    width: 336px;
     height: 242px;
   }
   .swiper-pagination {
-    margin: 24px 0;
+    margin: 32px 0;
   }
 }
 
 @media screen and (max-width: 550px) {
   .swiper-slide {
     height: 264px;
+  }
+  .swiper-pagination {
+    margin: 22px 0;
   }
 }

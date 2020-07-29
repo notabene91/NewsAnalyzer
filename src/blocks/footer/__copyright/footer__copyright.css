@@ -4,15 +4,19 @@
   font-size: 16px;
   line-height: 22px;
   color: #B6BCBF;
+  margin: 0;
+  ;
 }
 
 @media screen and (max-width: 550px) {
   .footer__copyright {
     order: 3;
-    margin-left: 135px;
+    margin-left: 125px;
+    align-self: flex-end;
+    justify-self: center;
+    margin-top: 40px;
   }
 }
-
 
 @media screen and (max-width: 490px) {
   .footer__copyright {
