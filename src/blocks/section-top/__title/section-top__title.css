@@ -9,6 +9,7 @@
 
 @media screen and (max-width: 890px) {
   .section-top__title {
+    width: 44%;
     font-size: 30px;
     line-height: 34px;
   }

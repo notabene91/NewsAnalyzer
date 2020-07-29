@@ -9,3 +9,9 @@
   outline: none;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 550px) {
+  .cards__button {
+    width: 90%;
+  }
+}

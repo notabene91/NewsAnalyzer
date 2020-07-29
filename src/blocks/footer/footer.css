@@ -2,7 +2,6 @@
 @import url(./__link/footer__link.css);
 @import url(./__navigation/footer__navigation.css);
 @import url(./__icon/footer__icon.css);
-
 .footer {
   display: flex;
   justify-content: space-between;
@@ -11,9 +10,25 @@
   padding: 0 104px 0;
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1024px) {
   .footer {
     min-height: 63px;
     padding: 12px 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer {
+    align-items: flex-start;
+    min-height: 184px;
+    flex-wrap: wrap;
+    padding: 20px 24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer {
+    min-height: 224px;
+    padding: 20px 16px 22px;
   }
 }

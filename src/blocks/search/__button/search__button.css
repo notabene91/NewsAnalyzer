@@ -32,3 +32,12 @@
     min-width: 20.4%;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .search__button {
+    position: static;
+    transform: translate(0, 0);
+    min-width: 95%;
+    margin-bottom: 30px;
+  }
+}

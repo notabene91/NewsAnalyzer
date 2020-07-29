@@ -23,3 +23,10 @@
     margin-bottom: 16px;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .search__title {
+   margin-top: 88px;
+   max-width: 80%;
+  }
+}

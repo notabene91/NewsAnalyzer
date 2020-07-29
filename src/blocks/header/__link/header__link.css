@@ -32,3 +32,15 @@
     padding-bottom: 10%;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .header__link {
+    margin-right: 11px;
+  }
+  .header__link.header__link_active {
+    padding-bottom: 10%;
+  }
+  .header__link.header__link_active.header__link_theme_white {
+    padding-bottom: 10%;
+  }
+}

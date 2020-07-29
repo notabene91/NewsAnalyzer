@@ -2,7 +2,6 @@
 @import url(./__logo/header__logo.css);
 @import url(./__navigation/header__navigation.css);
 @import url(./_theme_white/header_theme_white.css);
-
 .header {
   margin: 0 auto;
   position: absolute;
@@ -19,5 +18,11 @@
 @media screen and (max-width: 890px) {
   .header {
     min-height: 63px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    min-height: 56px;
   }
 }

@@ -1,7 +1,7 @@
 .tech__image {
-    margin-right: 37px;
-  }
+  margin-right: 37px;
+}
 
-  .tech__image:last-of-type {
-    margin-right: 0;
-  }
+.tech__image:last-of-type {
+  margin-right: 0;
+}

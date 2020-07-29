@@ -2,7 +2,7 @@
   max-width: 400px;
   box-sizing: border-box;
   background-color: #fff;
-  min-height: 288px;
+  height: 288px;
   padding: 24px;
   list-style-type: none;
   border-radius: 16px;
@@ -44,14 +44,19 @@
   background-image: url('../images/next.svg');
 }
 
+@media screen and (max-width: 1024px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 970px) {
   .swiper-slide {
     max-width: 336px;
     height: 242px;
   }
-  .swiper-button-prev, .swiper-button-next {
-    display: none;
+  .swiper-pagination {
+    margin: 24px 0;
   }
 }
 

@@ -1,13 +1,17 @@
 @import url(./__link/bredcrumbs__link.css);
-
 .breadcrumbs {
-    display: flex;
-    margin: 0 0 80px;
-    padding: 0;
-    list-style-type: none;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-  }
+  display: flex;
+  margin: 0 0 80px;
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
 
+@media screen and (max-width: 890px) {
+  .breadcrumbs {
+    margin-bottom: 62px;
+  }
+}

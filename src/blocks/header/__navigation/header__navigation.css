@@ -6,9 +6,16 @@
   line-height: 24px;
 }
 
-
 @media screen and (max-width: 890px) {
   .header__navigation {
     margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header__navigation {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 16px;
   }
 }

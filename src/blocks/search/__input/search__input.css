@@ -35,3 +35,10 @@
     margin-bottom: 48px;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .search__input {
+    width: 95%;
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,28 @@
+.author__wrapper {
+  align-self: center;
+  padding-top: 56.25%;
+  width: 32.8%;
+  position: relative;
+  margin-right: 56px;
+}
+
+@media screen and (max-width: 1024px) {
+  .author__wrapper {
+    width: 55%;
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .author__wrapper {
+    width: 75%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .author__wrapper {
+    width: 95%;
+  }
+}

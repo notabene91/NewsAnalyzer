@@ -1,4 +1,9 @@
 .statistic__month {
-    width: 8.4%;
+  width: 8.4%;
+}
+
+@media screen and (max-width: 890px) {
+  .statistic__month {
+    margin-right: 50px;
   }
-  
+}

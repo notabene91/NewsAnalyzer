@@ -2,7 +2,7 @@
 @import url(./__photo/author__photo.css);
 @import url(./__text/author__text.css);
 @import url(./__title/author__title.css);
-
+@import url(./__wrapper/author__wrapper.css);
 .author {
   display: flex;
   padding: 72px 0 80px 104px;
@@ -11,5 +11,24 @@
 @media screen and (max-width: 1024px) {
   .author {
     padding: 40px 40px 48px;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .author {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .author {
+    padding: 32px 24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .author {
+    padding: 12px 16px;
   }
 }

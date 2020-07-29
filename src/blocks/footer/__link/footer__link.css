@@ -6,6 +6,7 @@
 
 .footer__link:last-of-type {
   margin-right: 0;
+  margin-bottom: 0;
 }
 
 .footer__link_icon {
@@ -27,5 +28,15 @@
 @media screen and (max-width: 1024px) {
   .footer__link {
     margin-right: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer__link {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  .footer__link_icon {
+    margin-right: 24px;
   }
 }

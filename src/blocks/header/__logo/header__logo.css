@@ -7,3 +7,9 @@
     margin-left: 40px;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .header__logo {
+    margin-left: 16px;
+  }
+}

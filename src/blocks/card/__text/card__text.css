@@ -19,3 +19,10 @@
     margin-bottom: 16px;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .card__text {
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+}
