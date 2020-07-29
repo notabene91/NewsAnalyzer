@@ -7,14 +7,14 @@
   <meta name="description" content="Сайт для поиска новостей">
   <meta name="author" content="Александр Шабалин">
   <title>NewsAnalyzer</title>
-  <link rel="stylesheet" href="styles/index.75fe23d2c16c57fb0f51.css">
+  <link rel="stylesheet" href="styles/index.10d42f3f8daa2b090dc8.css">
   <link rel="icon" href="./images/favicon.png" type="image/png">
 </head>
 
 <body class="page">
   <header class="header">
     <picture class="header__logo">
-      <source srcset="./images/logo-small.svg" alt="Логотип." media="(max-width: 468px)">
+      <source srcset="./images/logo-small.svg" alt="Логотип." media="(max-width: 590px)">
       <img src="./images/logo.svg" alt="Логотип.">
     </picture>
     <nav class="header__navigation">
@@ -34,11 +34,11 @@
         </form>
       </div>
     </section>
-    <section class="preloader">
+    <section class="preloader preloader_visible">
       <div class="preloader__circle"></div>
       <p class="preloader__text">Идет поиск новостей...</p>
     </section>
-    <section class="not-found">
+    <section class="not-found not-found_visible">
       <img src="./images/not-found.svg" alt="Грустный смайл." class="not-found__image">
       <h2 class="not-found__title">Ничего не найдено</h2>
       <p class="not-found__subtitle">К сожалению по вашему запросу
@@ -118,7 +118,9 @@
       <button class="button cards__button">Показать еще</button>
     </section>
     <section class="author">
-      <img src="./images/avatar.png" alt="Портрет автора." class="author__photo">
+      <div class="author__wrapper">
+        <img src="./images/avatar.png" alt="Портрет автора." class="author__photo">
+      </div>
       <div class="author__container">
         <h2 class="author__title">Об авторе</h2>
         <p class="author__text">Привет! Меня зовут Саша и я фронтендер. Хорошо знаю HTML и СSS, нативный JavaScript,
@@ -128,7 +130,7 @@
       </div>
     </section>
   </main>
-  
+
   <footer class="footer">
     <p class="footer__copyright">&copy; 2020. Александр Шабалин</p>
     <nav class="footer__navigation">
