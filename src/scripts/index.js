@@ -2,6 +2,8 @@ import '../pages/index.css';
 import { NewsApi } from "./modules/NewsApi";
 import { NewsCard } from "./components/NewsCard";
 import { NewsCardList } from "./components/NewsCardList";
+import { formatDateforCard } from "./utils/dateFormat";
+
 import {
   CONFIG_NEWS as configNews,
   INPUT as input,
@@ -14,9 +16,8 @@ import {
   NEWS_MARKUP as newsMarkup
 } from "./constants/Constants"
 
-
 const newsApi = new NewsApi(configNews);
-const addFunction = (card) => (new NewsCard(card, newsMarkup).createCard(newsCard));
+const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard).createCard(newsCard));
 const newsCardList = new NewsCardList(cardsList, addFunction);
 notFound.classList.remove('not-found_visible');
 searchButton.addEventListener('click', evt => {

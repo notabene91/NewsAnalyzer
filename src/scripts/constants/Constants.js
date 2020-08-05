@@ -1,3 +1,5 @@
+import {formatDate} from '../utils/dateFormat';
+
 const INPUT = document.querySelector('.search__input');
 const SEARCH_BUTTON = document.querySelector('.search__button');
 const NOT_FOUND = document.querySelector('.not-found');
@@ -6,13 +8,16 @@ const NEWS_CARD = document.querySelector('#news-card')
 const CARDS = document.querySelector('.cards');
 const CARDS_LIST = document.querySelector('.cards__list');
 const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://praktikum.tk/news/v2';
-const CONFIG_NEWS = {
+const currentDate = new Date();
+const dayMS = 86400000
+const weekAgoDate = new Date(currentDate.getTime() - (dayMS * 7))
 
+const CONFIG_NEWS = {
   url: `${isDev}/everything`,
   apiKey: 'e86c20182d654a7c937fd8deb0481039',
   language: 'ru',
-  from: '2020-07-27',
-  to: '2020-08-04',
+  from: `${formatDate(weekAgoDate)}`,
+  to: `${formatDate(currentDate)}`,
   sortBy: 'relevancy',
   pageSize: '100'
 }

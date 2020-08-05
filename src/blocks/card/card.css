@@ -12,6 +12,9 @@
   background-color: #fff;
   border-radius: 16px;
   max-height: 576px;
+  transition: .3s;
 }
 
-
+.card:hover {
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
