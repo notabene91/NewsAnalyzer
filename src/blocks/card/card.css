@@ -13,6 +13,7 @@
   border-radius: 16px;
   max-height: 576px;
   transition: .3s;
+  cursor: url(../../images/Pointer.png), pointer;
 }
 
 .card:hover {

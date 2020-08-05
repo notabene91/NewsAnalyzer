@@ -23,6 +23,7 @@ const CONFIG_NEWS = {
 }
 const NEWS_MARKUP = `
   <article class="card">
+  <a href="" class="link card__link" target="_blank">
     <div class="card__image"></div>
     <div class="card__container">
     <div>
@@ -34,6 +35,7 @@ const NEWS_MARKUP = `
       <p class="card__source"></p>
     </div>
     </div>
+    </a>
   </article>`
 export {
   INPUT,
