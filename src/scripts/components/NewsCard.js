@@ -8,7 +8,8 @@ export class NewsCard {
   }
 
   createCard() {
-    const newCard = document.createElement('div');
+    const newCard = document.createElement('article');
+    newCard.classList.add('article');
     newCard.insertAdjacentHTML('afterbegin', this.markup);
     newCard.querySelector('.card').setAttribute('href', `${this.data.url}`)
     newCard.querySelector('.card__date').textContent = this.formatFunc(this.data.publishedAt);

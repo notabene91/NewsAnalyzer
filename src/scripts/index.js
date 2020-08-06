@@ -1,9 +1,9 @@
 import '../pages/index.css';
 import { NewsApi } from "./modules/NewsApi";
 import { NewsCard } from "./components/NewsCard";
+import { DataStorage } from "./modules/DataStorage";
 import { NewsCardList } from "./components/NewsCardList";
 import { formatDateforCard } from "./utils/dateFormat";
-
 import {
   CONFIG_NEWS as configNews,
   INPUT as input,
@@ -13,15 +13,24 @@ import {
   NEWS_CARD as newsCard,
   CARDS as cards,
   CARDS_LIST as cardsList,
-  NEWS_MARKUP as newsMarkup
+  NEWS_MARKUP as newsMarkup,
 } from "./constants/Constants"
 
+const dataStorage = new DataStorage();
 const newsApi = new NewsApi(configNews);
 const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard).createCard(newsCard));
 const newsCardList = new NewsCardList(cardsList, addFunction);
 notFound.classList.remove('not-found_visible');
+input.value = dataStorage.getItem('input');
+if (localStorage.cards) {
+  cards.classList.add('cards_visible');
+  newsCardList.render(dataStorage.parseItem('cards'));
+}
 searchButton.addEventListener('click', evt => {
   evt.preventDefault();
+  dataStorage.setItem('input', input.value);
+  newsCardList.clear();
+  dataStorage.removeItem('cards');
   preloader.classList.add('preloader_visible');
   newsApi.getNews(input.value)
     .then((res) => {
@@ -29,10 +38,10 @@ searchButton.addEventListener('click', evt => {
         notFound.classList.add('not-found_visible');
       }
       else {
-        console.log(res)
         notFound.classList.remove('not-found_visible');
         cards.classList.add('cards_visible');
-        newsCardList.render(res);
+        dataStorage.setItem('cards', JSON.stringify(res));
+        newsCardList.render(dataStorage.parseItem('cards'));
       }
     })
     .catch(err => {
@@ -42,3 +51,4 @@ searchButton.addEventListener('click', evt => {
       preloader.classList.remove('preloader_visible')
     })
 })
+

@@ -9,9 +9,8 @@ const CARDS = document.querySelector('.cards');
 const CARDS_LIST = document.querySelector('.cards__list');
 const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://praktikum.tk/news/v2';
 const currentDate = new Date();
-console.log(currentDate)
 const dayMS = 86400000;
-const weekAgoDate = new Date(currentDate.getTime() - (dayMS * 7))
+const weekAgoDate = new Date(currentDate.getTime() - (dayMS * 7));
 
 const CONFIG_NEWS = {
   url: `${isDev}/everything`,
@@ -19,7 +18,7 @@ const CONFIG_NEWS = {
   language: 'ru',
   from: `${formatDate(weekAgoDate)}`,
   to: `${formatDate(currentDate)}`,
-  sortBy: 'relevancy',
+  sortBy: 'popularity',
   pageSize: '100'
 }
 const NEWS_MARKUP = `
@@ -46,5 +45,5 @@ export {
   CARDS,
   CARDS_LIST,
   NEWS_CARD,
-  NEWS_MARKUP
+  NEWS_MARKUP,
 }

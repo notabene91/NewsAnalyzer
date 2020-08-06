@@ -9,5 +9,11 @@ export class NewsCardList {
       this.list.append(this.addFunction(element));
     });
   }
+
+  clear() {
+    while (this.list.firstChild) {
+      this.list.removeChild(this.list.firstChild)
+    };
+  }
 }
 
