@@ -14,18 +14,29 @@ import {
   CARDS as cards,
   CARDS_LIST as cardsList,
   NEWS_MARKUP as newsMarkup,
+  SHOW_MORE_BUTTON as showMoreButton
 } from "./constants/Constants"
 
+function cardListWhenOpen() {
+  notFound.classList.remove('not-found_visible');
+  input.value = dataStorage.getItem('input');
+  if (localStorage.cards) {
+    cards.classList.add('cards_visible');
+    newsCardList.render((sliceStorageNews(dataStorage.parseItem('cards').articles)), 0);
+  }
+}
+function sliceStorageNews(articles) {
+  let tempArr = [];
+  for (let i = 0; i < articles.length; i += 3) {
+    tempArr.push(articles.slice(i, i + 3))
+  }
+  return tempArr
+}
 const dataStorage = new DataStorage();
 const newsApi = new NewsApi(configNews);
 const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard).createCard(newsCard));
 const newsCardList = new NewsCardList(cardsList, addFunction);
-notFound.classList.remove('not-found_visible');
-input.value = dataStorage.getItem('input');
-if (localStorage.cards) {
-  cards.classList.add('cards_visible');
-  newsCardList.render(dataStorage.parseItem('cards'));
-}
+cardListWhenOpen();
 searchButton.addEventListener('click', evt => {
   evt.preventDefault();
   dataStorage.setItem('input', input.value);
@@ -41,7 +52,7 @@ searchButton.addEventListener('click', evt => {
         notFound.classList.remove('not-found_visible');
         cards.classList.add('cards_visible');
         dataStorage.setItem('cards', JSON.stringify(res));
-        newsCardList.render(dataStorage.parseItem('cards'));
+        newsCardList.render((sliceStorageNews(dataStorage.parseItem('cards').articles)), 0);
       }
     })
     .catch(err => {
@@ -51,4 +62,11 @@ searchButton.addEventListener('click', evt => {
       preloader.classList.remove('preloader_visible')
     })
 })
+let i = 1;
+
+showMoreButton.addEventListener('click', () => {
+  i++
+  newsCardList.render((sliceStorageNews(dataStorage.parseItem('cards').articles)), i);
+})
+
 

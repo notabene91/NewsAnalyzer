@@ -4,7 +4,6 @@ export class NewsCard {
     this.markup = markup;
     this.data = data;
     this.formatFunc = formatFunc;
-
   }
 
   createCard() {

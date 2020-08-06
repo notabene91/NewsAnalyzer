@@ -4,8 +4,8 @@ export class NewsCardList {
     this.addFunction = addFunction;
   }
 
-  render(res) {
-    res.articles.forEach(element => {
+  render(arr, i) {
+    arr[i].forEach(element => {
       this.list.append(this.addFunction(element));
     });
   }

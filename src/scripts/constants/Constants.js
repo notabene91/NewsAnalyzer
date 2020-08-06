@@ -1,5 +1,5 @@
 import { formatDate } from '../utils/dateFormat';
-
+ 
 const INPUT = document.querySelector('.search__input');
 const SEARCH_BUTTON = document.querySelector('.search__button');
 const NOT_FOUND = document.querySelector('.not-found');
@@ -11,6 +11,7 @@ const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://p
 const currentDate = new Date();
 const dayMS = 86400000;
 const weekAgoDate = new Date(currentDate.getTime() - (dayMS * 7));
+const SHOW_MORE_BUTTON = document.querySelector('.cards__button');
 
 const CONFIG_NEWS = {
   url: `${isDev}/everything`,
@@ -46,4 +47,5 @@ export {
   CARDS_LIST,
   NEWS_CARD,
   NEWS_MARKUP,
+  SHOW_MORE_BUTTON,
 }

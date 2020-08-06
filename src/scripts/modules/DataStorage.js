@@ -1,7 +1,5 @@
 export class DataStorage {
-  constructor() {
-
-  }
+  
   setItem(name, item) {
     localStorage.setItem(`${name}`, item);
   }
