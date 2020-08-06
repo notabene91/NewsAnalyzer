@@ -6,7 +6,7 @@
   justify-self: self-start;
   color: #1A1B22;
   margin: 0 0 16px;
-  max-width: 352px;
+  max-width: 100%;
   min-height: 30px;
   max-height: 90px;
   overflow: hidden;

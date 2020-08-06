@@ -4,6 +4,7 @@ import { NewsCard } from "./components/NewsCard";
 import { DataStorage } from "./modules/DataStorage";
 import { NewsCardList } from "./components/NewsCardList";
 import { formatDateforCard } from "./utils/dateFormat";
+import { findLongWord } from "./utils/findLongWord";
 import {
   CONFIG_NEWS as configNews,
   INPUT as input,
@@ -32,9 +33,10 @@ function sliceStorageNews(articles) {
   }
   return tempArr
 }
+
 const dataStorage = new DataStorage();
 const newsApi = new NewsApi(configNews);
-const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard).createCard(newsCard));
+const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard, findLongWord).createCard(newsCard));
 const newsCardList = new NewsCardList(cardsList, addFunction);
 cardListWhenOpen();
 searchButton.addEventListener('click', evt => {
@@ -63,7 +65,6 @@ searchButton.addEventListener('click', evt => {
     })
 })
 let i = 1;
-
 showMoreButton.addEventListener('click', () => {
   i++
   newsCardList.render((sliceStorageNews(dataStorage.parseItem('cards').articles)), i);
