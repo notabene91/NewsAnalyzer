@@ -3,17 +3,15 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 const slider = document.querySelector('.swiper-container');
 Swiper.use([Navigation, Pagination]);
 
-let mySwiper = new Swiper(slider, {
+export let mySwiper = new Swiper(slider, {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 1,
   spaceBetween: 8,
   keyboard: true,
   centeredSlides: true,
-  centerInsufficientSlides: true,
   grabCursor: true,
   freeMode: true,
-  touchEventsTarget: 'wrapper',
 
   pagination: {
     el: '.swiper-pagination',

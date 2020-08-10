@@ -6,21 +6,16 @@ export class CommitCard {
   }
 
   createCard() {
-    const newCard = document.createElement('article');
-    newCard.classList.add('article');
+    const newCard = document.createElement('div');
+    newCard.classList.add('swiper-slide');
     newCard.insertAdjacentHTML('afterbegin', this.markup);
-    newCard.querySelector('.card').setAttribute('href', `${this.data.url}`)
-    newCard.querySelector('.card__date').textContent = this.formatFunc(this.data.publishedAt);
-    newCard.querySelector('.card__title').textContent = this.findLongWord(this.data.title);
-    newCard.querySelector('.card__text').textContent = this.findLongWord(this.data.description);
-    newCard.querySelector('.card__source').textContent = this.data.source.name;
-    if (this.data.urlToImage === null || this.data.urlToImage === undefined) {
-      newCard.querySelector('.card__image').setAttribute('style', `background-image: url(../../images/not-found.svg)`)
+    newCard.querySelector('.slider-card__avatar').setAttribute('src', `${this.data.author.avatar_url}`);
+    newCard.querySelector('.slider-card__name').textContent = "Александр Шабалин";
+    if (this.data.commit.author.email = '61543007+notabene91@users.noreply.github.com') {
+      this.data.commit.author.email = 'notabene1991@yandex.ru'
     }
-    else {
-      newCard.querySelector('.card__image').setAttribute('style', `background-image: url(${this.data.urlToImage})`);
-    }
-
+    newCard.querySelector('.slider-card__mail').textContent = this.data.commit.author.email;
+    newCard.querySelector('.slider-card__text').textContent = this.data.commit.message
     return newCard
   }
 }

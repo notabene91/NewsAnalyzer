@@ -4,9 +4,9 @@ const INPUT = document.querySelector('.search__input');
 const SEARCH_BUTTON = document.querySelector('.search__button');
 const NOT_FOUND = document.querySelector('.not-found');
 const PRELOADER = document.querySelector('.preloader')
-const NEWS_CARD = document.querySelector('#news-card')
-const NEWS_CARDS = document.querySelector('.cards');
-const CARDS_LIST = document.querySelector('.cards__list');
+const NEWS_CARDS_SECTION = document.querySelector('.cards');
+const NEWS_CARDS_LIST = document.querySelector('.cards__list');
+const COMMITS_CONTAINER = document.querySelector('.swiper-wrapper')
 const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://praktikum.tk/news/v2';
 const currentDate = new Date();
 const dayMS = 86400000;
@@ -38,7 +38,6 @@ const NEWS_MARKUP = `
     </a>
   `
 const COMMIT_MARKUP = `
-  <div class="swiper-slide">
     <p class="slider-card__date"></p>
     <div class="slider-card__container">
       <img src="" alt="Аватар автора." class="slider-card__avatar">
@@ -48,7 +47,6 @@ const COMMIT_MARKUP = `
       </div>
     </div>
     <p class="slider-card__text"></p>
-  </div>
   `
 export {
   INPUT,
@@ -56,10 +54,11 @@ export {
   CONFIG_NEWS,
   NOT_FOUND,
   PRELOADER,
-  NEWS_CARDS,
-  CARDS_LIST,
-  NEWS_CARD,
+  NEWS_CARDS_SECTION,
+  NEWS_CARDS_LIST,
   NEWS_MARKUP,
   COMMIT_MARKUP,
+  COMMITS_CONTAINER,
   SHOW_MORE_BUTTON,
+
 }

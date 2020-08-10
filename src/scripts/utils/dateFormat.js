@@ -5,7 +5,7 @@ export function formatDate(date) {
 
 export function formatDateforCard(date) {
   const dateWithoutTime = date.toString().split('T');
-  const formattedDate = dateWithoutTime[1].split('-');
+  const formattedDate = dateWithoutTime[0].split('-');
   switch (formattedDate[1]) {
     case `01`: formattedDate[1] = "января"; break;
     case `02`: formattedDate[1] = "февраля"; break;

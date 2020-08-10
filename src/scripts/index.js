@@ -11,9 +11,8 @@ import {
   SEARCH_BUTTON as searchButton,
   NOT_FOUND as notFound,
   PRELOADER as preloader,
-  NEWS_CARD as newsCard,
-  NEWS_CARDS as newsCards,
-  CARDS_LIST as cardsList,
+  NEWS_CARDS_SECTION as newsCards,
+  NEWS_CARDS_LIST as cardsList,
   NEWS_MARKUP as newsMarkup,
 } from "./constants/Constants"
 
@@ -35,7 +34,7 @@ function sliceStorageNews(articles) {
 
 const dataStorage = new DataStorage();
 const newsApi = new NewsApi(configNews);
-const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard, findLongWord).createCard(newsCard));
+const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard, findLongWord).createCard());
 const newsCardList = new NewsCardList(cardsList, addFunction);
 cardListWhenOpen();
 searchButton.addEventListener('click', evt => {
@@ -53,7 +52,6 @@ searchButton.addEventListener('click', evt => {
         notFound.classList.remove('not-found_visible');
         newsCards.classList.add('cards_visible');
         dataStorage.setItem('cards', JSON.stringify(res));
-        console.log(sliceStorageNews(dataStorage.parseItem('cards').articles))
         newsCardList.render(dataStorage.parseItem('cards').articles);
       }
     })
