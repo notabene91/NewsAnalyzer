@@ -1,9 +1,9 @@
 export class NewsCard {
 
-  constructor(data, markup, formatFunc, findLongWord) {
+  constructor(data, markup, formatDate, findLongWord) {
     this.markup = markup;
     this.data = data;
-    this.formatFunc = formatFunc;
+    this.formatDate = formatDate;
     this.findLongWord = findLongWord;
   }
 
@@ -12,7 +12,7 @@ export class NewsCard {
     newCard.classList.add('article');
     newCard.insertAdjacentHTML('afterbegin', this.markup);
     newCard.querySelector('.card').setAttribute('href', `${this.data.url}`)
-    newCard.querySelector('.card__date').textContent = this.formatFunc(this.data.publishedAt);
+    newCard.querySelector('.card__date').textContent = this.formatDate(this.data.publishedAt);
     newCard.querySelector('.card__title').textContent = this.findLongWord(this.data.title);
     newCard.querySelector('.card__text').textContent = this.findLongWord(this.data.description);
     newCard.querySelector('.card__source').textContent = this.data.source.name;

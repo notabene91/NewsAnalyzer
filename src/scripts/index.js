@@ -12,18 +12,17 @@ import {
   NOT_FOUND as notFound,
   PRELOADER as preloader,
   NEWS_CARD as newsCard,
-  CARDS as cards,
+  NEWS_CARDS as newsCards,
   CARDS_LIST as cardsList,
   NEWS_MARKUP as newsMarkup,
-  SHOW_MORE_BUTTON as showMoreButton
 } from "./constants/Constants"
 
 function cardListWhenOpen() {
   notFound.classList.remove('not-found_visible');
   input.value = dataStorage.getItem('input');
   if (localStorage.cards) {
-    cards.classList.add('cards_visible');
-    newsCardList.render((sliceStorageNews(dataStorage.parseItem('cards').articles)), 0);
+    newsCards.classList.add('cards_visible');
+    newsCardList.render(dataStorage.parseItem('cards').articles);
   }
 }
 function sliceStorageNews(articles) {
@@ -52,9 +51,10 @@ searchButton.addEventListener('click', evt => {
       }
       else {
         notFound.classList.remove('not-found_visible');
-        cards.classList.add('cards_visible');
+        newsCards.classList.add('cards_visible');
         dataStorage.setItem('cards', JSON.stringify(res));
-        newsCardList.render((sliceStorageNews(dataStorage.parseItem('cards').articles)), 0);
+        console.log(sliceStorageNews(dataStorage.parseItem('cards').articles))
+        newsCardList.render(dataStorage.parseItem('cards').articles);
       }
     })
     .catch(err => {
@@ -64,10 +64,6 @@ searchButton.addEventListener('click', evt => {
       preloader.classList.remove('preloader_visible')
     })
 })
-let i = 1;
-showMoreButton.addEventListener('click', () => {
-  i++
-  newsCardList.render((sliceStorageNews(dataStorage.parseItem('cards').articles)), i);
-})
+
 
 
