@@ -14,7 +14,6 @@ const references = document.querySelector('.references');
 const statContainer = document.querySelector('.statistic__container');
 const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://praktikum.tk/news/v2';
 const CURRENT_DATE = new Date();
-console.log(CURRENT_DATE)
 const DAY_MS = 86400000;
 const WEEK_AGO_DATE = new Date(CURRENT_DATE.getTime() - (DAY_MS * 7));
 
@@ -57,7 +56,7 @@ const COMMIT_MARKUP = `
 const STATISTIC_MARKUP = `
   <span class="statistic__date"></span>
   <div class="statistic__bar">
-    <span class="statistic__count">19</span>
+    <span class="statistic__count"></span>
   </div>
 `
 

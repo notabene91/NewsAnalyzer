@@ -7,8 +7,16 @@ export function formatDate(date) {
 export function formatDateforAnalytics(date) {
   let onlyDate = date.getDate();
   onlyDate < 10 ? onlyDate = `0${onlyDate}` : onlyDate;
-  let onlyDay = date.toLocaleDateString('ru', {weekday: 'short'});
+  let onlyDay = date.toLocaleDateString('ru', { weekday: 'short' });
   return `${onlyDate}, ${onlyDay}`
+}
+
+//Функция форматирующая дату публикации
+export function formatPublishedDate(date) {
+  return date.map((article) => {
+    return new Date(article.publishedAt).getDate()
+  })
+
 }
 
 //Функция, заменяющая названия месяцев на прописной вариант

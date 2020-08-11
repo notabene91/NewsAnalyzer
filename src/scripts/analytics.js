@@ -3,6 +3,7 @@ import { DataStorage } from "./modules/DataStorage";
 import { formatAskedWord } from "./utils/formatAskedWord";
 import { countWordinTitles } from "./utils/countWordinTitles";
 import { formatDateforAnalytics } from "./utils/dateFormat";
+import { formatPublishedDate } from "./utils/dateFormat";
 import { Statistics } from "./components/Statistics";
 
 import {
@@ -15,9 +16,12 @@ import {
   statContainer,
 } from "./constants/Constants"
 
+
+
 const dataStorage = new DataStorage()
-const statistics = new Statistics(formatDateforAnalytics, statisticMarkup, statContainer);
+const arrWithPublishedDates = formatPublishedDate(dataStorage.parseItem('cards').articles);
+const statistics = new Statistics(formatDateforAnalytics, statisticMarkup, statContainer, arrWithPublishedDates);
 statistics.countDate(currentDate, 7, dayMs);
 youAsked.textContent = `Вы спросили "${formatAskedWord(dataStorage.getItem('input'))}"`;
 weeklyNews.textContent = `${dataStorage.parseItem('cards').totalResults}`;
-references.textContent = `${countWordinTitles((dataStorage.getItem('input')),(dataStorage.parseItem('cards').articles))}`
+references.textContent = `${countWordinTitles((dataStorage.getItem('input')), (dataStorage.parseItem('cards').articles))}`

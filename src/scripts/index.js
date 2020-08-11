@@ -4,7 +4,7 @@ import { NewsCard } from "./components/NewsCard";
 import { DataStorage } from "./modules/DataStorage";
 import { NewsCardList } from "./components/NewsCardList";
 import { formatDateforCard } from "./utils/dateFormat";
-import { findLongWord } from "./utils/findLongWord";
+import { findLinks } from "./utils/findLongWord";
 import {
   CONFIG_NEWS as configNews,
   NEWS_MARKUP as newsMarkup,
@@ -34,7 +34,7 @@ function sliceStorageNews(articles) {
 
 const dataStorage = new DataStorage();
 const newsApi = new NewsApi(configNews);
-const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard, findLongWord).createCard());
+const addFunction = (card) => (new NewsCard(card, newsMarkup, formatDateforCard, findLinks).createCard());
 const newsCardList = new NewsCardList(cardsList, addFunction);
 cardListWhenOpen();
 searchForm.addEventListener('submit', evt => {

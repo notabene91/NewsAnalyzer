@@ -1,4 +1,4 @@
-export function findLongWord(str) {
+export function findLinks(str) {
   if (str != null || str != undefined) {
   const arr = str.split(' ')
   const newArr = arr.filter((item) => {
@@ -7,5 +7,4 @@ export function findLongWord(str) {
   return newArr.join(' ');
   }
   else return ''
-
 }
