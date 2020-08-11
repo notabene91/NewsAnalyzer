@@ -6,7 +6,7 @@ import { CommitCard } from "./components/CommitCard";
 import { CommitCardList } from './components/CommitCardList';
 import {
   COMMIT_MARKUP as commitMarkup,
-  COMMITS_CONTAINER as commitsContainer
+  commitsContainer
 } from "./constants/Constants"
 
 
@@ -17,11 +17,10 @@ const addFunction = (card) => (new CommitCard(card, commitMarkup).createCard());
 const commitCardList =  new CommitCardList(commitsContainer, addFunction);
 githubApi.getCommits()
 .then((res) => {
-  mySwiper.update()
   dataStorage.setItem('commits', JSON.stringify(res));  
+  commitCardList.render(dataStorage.parseItem('commits'));
+  mySwiper.update()
 }) 
 .catch(err => {
   console.log(err)
 })
-
-commitCardList.render(dataStorage.parseItem('commits'));

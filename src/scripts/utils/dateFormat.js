@@ -1,8 +1,17 @@
+//Функция, приводящая дату к виду YYYY-MM-DD
 export function formatDate(date) {
   const formattedDate = date.toLocaleDateString().split('.');
   return (`${formattedDate[2]}-${formattedDate[1]}-${formattedDate[0]}`)
 }
+// Функция, заменяющая названия дней на прописной вариант
+export function formatDateforAnalytics(date) {
+  let onlyDate = date.getDate();
+  onlyDate < 10 ? onlyDate = `0${onlyDate}` : onlyDate;
+  let onlyDay = date.toLocaleDateString('ru', {weekday: 'short'});
+  return `${onlyDate}, ${onlyDay}`
+}
 
+//Функция, заменяющая названия месяцев на прописной вариант
 export function formatDateforCard(date) {
   const dateWithoutTime = date.toString().split('T');
   const formattedDate = dateWithoutTime[0].split('-');

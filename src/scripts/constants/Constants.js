@@ -1,24 +1,29 @@
 import { formatDate } from '../utils/dateFormat';
 
-const INPUT = document.querySelector('.search__input');
-const SEARCH_BUTTON = document.querySelector('.search__button');
-const NOT_FOUND = document.querySelector('.not-found');
-const PRELOADER = document.querySelector('.preloader')
-const NEWS_CARDS_SECTION = document.querySelector('.cards');
-const NEWS_CARDS_LIST = document.querySelector('.cards__list');
-const COMMITS_CONTAINER = document.querySelector('.swiper-wrapper')
+const input = document.querySelector('.search__input');
+const searchForm = document.forms.search;
+const notFound = document.querySelector('.not-found');
+const preloader = document.querySelector('.preloader')
+const cardsSection = document.querySelector('.cards');
+const cardsList = document.querySelector('.cards__list');
+const commitsContainer = document.querySelector('.swiper-wrapper')
+const showMoreButton = document.querySelector('.cards__button');
+const youAsked = document.querySelector('.asked__title');
+const weeklyNews = document.querySelector('.weeklynews');
+const references = document.querySelector('.references');
+const statContainer = document.querySelector('.statistic__container');
 const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://praktikum.tk/news/v2';
-const currentDate = new Date();
-const dayMS = 86400000;
-const weekAgoDate = new Date(currentDate.getTime() - (dayMS * 7));
-const SHOW_MORE_BUTTON = document.querySelector('.cards__button');
+const CURRENT_DATE = new Date();
+console.log(CURRENT_DATE)
+const DAY_MS = 86400000;
+const WEEK_AGO_DATE = new Date(CURRENT_DATE.getTime() - (DAY_MS * 7));
 
 const CONFIG_NEWS = {
   url: `${isDev}/everything`,
   apiKey: 'e86c20182d654a7c937fd8deb0481039',
   language: 'ru',
-  from: `${formatDate(weekAgoDate)}`,
-  to: `${formatDate(currentDate)}`,
+  from: `${formatDate(WEEK_AGO_DATE)}`,
+  to: `${formatDate(CURRENT_DATE)}`,
   sortBy: 'popularity',
   pageSize: '100'
 }
@@ -48,17 +53,32 @@ const COMMIT_MARKUP = `
     </div>
     <p class="slider-card__text"></p>
   `
+
+const STATISTIC_MARKUP = `
+  <span class="statistic__date"></span>
+  <div class="statistic__bar">
+    <span class="statistic__count">19</span>
+  </div>
+`
+
 export {
-  INPUT,
-  SEARCH_BUTTON,
-  CONFIG_NEWS,
-  NOT_FOUND,
-  PRELOADER,
-  NEWS_CARDS_SECTION,
-  NEWS_CARDS_LIST,
   NEWS_MARKUP,
   COMMIT_MARKUP,
-  COMMITS_CONTAINER,
-  SHOW_MORE_BUTTON,
-
+  CONFIG_NEWS,
+  CURRENT_DATE,
+  WEEK_AGO_DATE,
+  STATISTIC_MARKUP,
+  DAY_MS,
+  input,
+  searchForm,
+  notFound,
+  preloader,
+  cardsSection,
+  cardsList,
+  commitsContainer,
+  showMoreButton,
+  youAsked,
+  weeklyNews,
+  references,
+  statContainer
 }
