@@ -7,17 +7,17 @@
   <meta name="description" content="Сайт для поиска новостей">
   <meta name="author" content="Александр Шабалин">
   <title>NewsAnalyzer</title>
-  <link rel="stylesheet" href="styles/index.981bc455d51438b123aa.css">
+  <link rel="stylesheet" href="styles/index.b1fd0515a6f85ad66060.css">
   <link rel="icon" href="./images/favicon.png" type="image/png">
 </head>
 
 <body class="page">
   <header class="header">
     <a href="./index.html" class="link header__link">
-    <picture class="header__logo">
-      <source srcset="./images/logo-small.svg" media="(max-width: 590px)">
-      <img src="./images/logo.svg" alt="Логотип.">
-    </picture>
+      <picture class="header__logo">
+        <source srcset="./images/logo-small.svg" media="(max-width: 590px)">
+        <img src="./images/logo.svg" alt="Логотип.">
+      </picture>
     </a>
     <nav class="header__navigation">
       <a href="./index.html" class="link header__link header__link_active">Главная</a>
@@ -31,7 +31,8 @@
         <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
           прошедшую неделю.</p>
         <form action="submit" class="search__form" name="search">
-          <input type="search" class="search__input" placeholder="Введите тему новости" required>
+          <input type="search" id="search" class="search__input" placeholder="Введите тему новости" required>
+          <span class="search__error"></span>
           <button class="button search__button">Искать</button>
         </form>
       </div>
@@ -61,7 +62,8 @@
       </div>
       <div class="author__container">
         <h2 class="author__title">Об авторе</h2>
-        <p class="author__text">Привет! Меня зовут Саша и я занимаюсь веб-разработкой. Хорошо знаю HTML и СSS, нативный JavaScript,
+        <p class="author__text">Привет! Меня зовут Саша и я занимаюсь веб-разработкой. Хорошо знаю HTML и СSS, нативный
+          JavaScript,
           актитвно учу
           Vue. Также умею настраивать Webpack и пользуюсь Git`ом. Обожаю БЭМ и адаптивность, а также являюсь фанатом
           своего дела &#128521;.</p>
@@ -83,7 +85,7 @@
           src="./images/fb.svg" alt="Фэйсбук." class="footer__icon"></a>
     </nav>
   </footer>
-  <script src="scripts/index.1c317ebb8d7eb789fccb.js"></script>
+  <script src="scripts/index.6bbcb51c6ba4c5fc134d.js"></script>
 </body>
 
 </html>
