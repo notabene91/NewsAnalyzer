@@ -1,7 +1,9 @@
 import { formatDate } from '../utils/dateFormat';
 
-const input = document.querySelector('.search__input');
+const input = document.querySelector('#search');
 const searchForm = document.forms.search;
+const searchButton = document.querySelector('.search__button')
+const searchError = document.querySelector('.search__error')
 const notFound = document.querySelector('.not-found');
 const preloader = document.querySelector('.preloader')
 const cardsSection = document.querySelector('.cards');
@@ -69,7 +71,9 @@ export {
   STATISTIC_MARKUP,
   DAY_MS,
   input,
+  searchButton,
   searchForm,
+  searchError,
   notFound,
   preloader,
   cardsSection,

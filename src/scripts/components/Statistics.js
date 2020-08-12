@@ -16,7 +16,6 @@ export class Statistics {
   }
 
   _renderDate(arr) {
-
     arr.forEach((item) => {
       this.statContainer.insertAdjacentHTML('afterbegin', this.markup)
       this.statContainer.querySelector('.statistic__date').textContent = item;

@@ -1,10 +1,18 @@
 .statistic__count {
-    margin-left: 6px;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    color: #fff;
+  margin-left: 6px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: -0 -1px 0 #2F71E5, 0 -1px 0 #2F71E5, -0 1px 0 #2F71E5, 0 1px 0 #2F71E5, -1px -0 0 #2F71E5, 1px -0 0 #2F71E5, -1px 0 0 #2F71E5, 1px 0 0 #2F71E5, -1px -1px 0 #2F71E5, 1px -1px 0 #2F71E5, -1px 1px 0 #2F71E5, 1px 1px 0 #2F71E5, -1px -1px 0 #2F71E5, 1px -1px 0 #2F71E5, -1px 1px 0 #2F71E5, 1px 1px 0 #2F71E5;
+}
+
+@media screen and (max-width: 550px) {
+  .statistic__count {
+    margin-left: 1vw;
+    text-shadow: -0 -1px 0 #2F71E5, 0 -1px 0 #2F71E5, -0 1px 0 #2F71E5, 0 1px 0 #2F71E5, -1px -0 0 #2F71E5, 1px -0 0 #2F71E5, -1px 0 0 #2F71E5, 1px 0 0 #2F71E5, -1px -1px 0 #2F71E5, 1px -1px 0 #2F71E5, -1px 1px 0 #2F71E5, 1px 1px 0 #2F71E5, -1px -1px 0 #2F71E5, 1px -1px 0 #2F71E5, -1px 1px 0 #2F71E5, 1px 1px 0 #2F71E5;
   }
+}

@@ -17,7 +17,6 @@ import {
 } from "./constants/Constants"
 
 
-
 const dataStorage = new DataStorage()
 const arrWithPublishedDates = formatPublishedDate(dataStorage.parseItem('cards').articles);
 const statistics = new Statistics(formatDateforAnalytics, statisticMarkup, statContainer, arrWithPublishedDates);
