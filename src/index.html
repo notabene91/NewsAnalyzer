@@ -13,10 +13,12 @@
 
 <body class="page">
   <header class="header">
-    <picture class="header__logo">
-      <source srcset="<%=require('./images/logo-small.svg').default%>"  media="(max-width: 590px)">
-      <img src="<%=require('./images/logo.svg').default%>" alt="Логотип.">
-    </picture>
+    <a href="./index.html" class="link header__link">
+      <picture class="header__logo">
+        <source srcset="<%=require('./images/logo-small.svg').default%>" media="(max-width: 590px)">
+        <img src="<%=require('./images/logo.svg').default%>" alt="Логотип.">
+      </picture>
+    </a>
     <nav class="header__navigation">
       <a href="./index.html" class="link header__link header__link_active">Главная</a>
       <a href="./about.html" class="link header__link">О проекте</a>
@@ -28,17 +30,18 @@
         <h1 class="search__title">Что в мире творится?</h1>
         <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
           прошедшую неделю.</p>
-        <form action="submit" class="search__form">
-          <input type="search" class="search__input" placeholder="Введите тему новости" required>
+        <form action="submit" class="search__form" name="search">
+          <input type="search" id="search" class="search__input" placeholder="Введите тему новости" required>
+          <span class="search__error"></span>
           <button class="button search__button">Искать</button>
         </form>
       </div>
     </section>
-    <section class="preloader preloader_visible">
+    <section class="preloader">
       <div class="preloader__circle"></div>
       <p class="preloader__text">Идет поиск новостей...</p>
     </section>
-    <section class="not-found not-found_visible">
+    <section class="not-found">
       <img src="<%=require('./images/not-found.svg').default%>" alt="Грустный смайл." class="not-found__image">
       <h2 class="not-found__title">Ничего не найдено</h2>
       <p class="not-found__subtitle">К сожалению по вашему запросу
@@ -50,70 +53,6 @@
         <a href="./analytics.html" class="link section-top__link">Посмотреть аналитику</a>
       </div>
       <div class="cards__list">
-        <article class="card">
-          <img src="<%=require('./images/card.jpg').default%>" alt="" class="card__image">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">Национальное достояние – парки</h3>
-            <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <p class="card__source">Лента.ру</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="<%=require('./images/card.jpg').default%>" alt="" class="card__image">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
-            <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
-              запечатлеть ускользающую красоту одного
-              из местных чудес природы.</p>
-            <p class="card__source">Афиша</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="<%=require('./images/card.jpg').default%>" alt="" class="card__image">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-            <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости
-              их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-            </p>
-            <p class="card__source">Медиазона</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="<%=require('./images/card.jpg').default%>" alt="" class="card__image">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">Национальное достояние – парки</h3>
-            <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <p class="card__source">Лента.ру</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="<%=require('./images/card.jpg').default%>" alt="" class="card__image">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
-            <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
-              запечатлеть ускользающую красоту одного
-              из местных чудес природы.</p>
-            <p class="card__source">Афиша</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="<%=require('./images/card.jpg').default%>" alt="" class="card__image">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-            <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости
-              их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-            </p>
-            <p class="card__source">Медиазона</p>
-          </div>
-        </article>
       </div>
       <button class="button cards__button">Показать еще</button>
     </section>
@@ -123,7 +62,8 @@
       </div>
       <div class="author__container">
         <h2 class="author__title">Об авторе</h2>
-        <p class="author__text">Привет! Меня зовут Саша и я фронтендер. Хорошо знаю HTML и СSS, нативный JavaScript,
+        <p class="author__text">Привет! Меня зовут Саша и я занимаюсь веб-разработкой. Хорошо знаю HTML и СSS, нативный
+          JavaScript,
           актитвно учу
           Vue. Также умею настраивать Webpack и пользуюсь Git`ом. Обожаю БЭМ и адаптивность, а также являюсь фанатом
           своего дела &#128521;.</p>
@@ -141,7 +81,7 @@
     <nav class="footer__navigation-icons">
       <a href="https://github.com/notabene91" target="_blank" class="link footer__link footer__link_icon"><img
           src="<%=require('./images/github.svg').default%>" alt="Гитхаб." class="footer__icon"></a>
-      <a href="https://facebook.com" target="_blank" class="link footer__link footer__link_icon"><img
+      <a href="https://ru-ru.facebook.com/yandex.praktikum/" target="_blank" class="link footer__link footer__link_icon"><img
           src="<%=require('./images/fb.svg').default%>" alt="Фэйсбук." class="footer__icon"></a>
     </nav>
   </footer>

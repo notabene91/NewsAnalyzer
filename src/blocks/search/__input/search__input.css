@@ -7,9 +7,10 @@
   min-height: 64px;
   width: 59%;
   border: 1px solid #D1D2D6;
+  caret-color: #2F71E5;
   border-radius: 100px;
   padding-left: 24px;
-  margin-bottom: 80px;
+  padding-right: 24px;
   backdrop-filter: blur(8px)
 }
 
@@ -26,13 +27,6 @@
   .search__input {
     width: 74%;
     min-height: 56px;
-    margin-bottom: 64px;
-  }
-}
-
-@media screen and (max-width: 890px) {
-  .search__input {
-    margin-bottom: 48px;
   }
 }
 

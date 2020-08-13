@@ -2,9 +2,13 @@
   position: absolute;
   transform: translate(-100%, 0);
   color: #fff;
-  min-width: 11.7%;
-  background-color: #2F71E5;
+  min-width: 15.3%;
+  background-color: #2F71E1;
   border-radius: 100px;
+}
+
+.search__button_inactive {
+  background-color: #3f81f3;
 }
 
 .search__button:hover {
