@@ -47,7 +47,7 @@
   .search__error::before {
     border-bottom: 0;
     border-top: 10px solid #e61c1ccc;
-    top: 32px;
+    top: 34px;
   }
 }
 
