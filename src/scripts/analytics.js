@@ -16,11 +16,12 @@ import {
   statContainer,
 } from "./constants/Constants"
 
-
-const dataStorage = new DataStorage()
-const arrWithPublishedDates = formatPublishedDate(dataStorage.parseItem('cards').articles);
-const statistics = new Statistics(formatDateforAnalytics, statisticMarkup, statContainer, arrWithPublishedDates);
-statistics.countDate(currentDate, 7, dayMs);
-youAsked.textContent = `Вы спросили "${formatAskedWord(dataStorage.getItem('input'))}"`;
-weeklyNews.textContent = `${dataStorage.parseItem('cards').totalResults}`;
-references.textContent = `${countWordinTitles((dataStorage.getItem('input')), (dataStorage.parseItem('cards').articles))}`
+(function () {
+  const dataStorage = new DataStorage()
+  const arrWithPublishedDates = formatPublishedDate(dataStorage.parseItem('cards').articles);
+  const statistics = new Statistics(formatDateforAnalytics, statisticMarkup, statContainer, arrWithPublishedDates);
+  statistics.countDate(currentDate, 7, dayMs);
+  youAsked.textContent = `Вы спросили "${formatAskedWord(dataStorage.getItem('input'))}"`;
+  weeklyNews.textContent = `${dataStorage.parseItem('cards').totalResults}`;
+  references.textContent = `${countWordinTitles((dataStorage.getItem('input')), (dataStorage.parseItem('cards').articles))}`
+})()

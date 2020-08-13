@@ -13,11 +13,13 @@ const showMoreButton = document.querySelector('.cards__button');
 const youAsked = document.querySelector('.asked__title');
 const weeklyNews = document.querySelector('.weeklynews');
 const references = document.querySelector('.references');
+const showMoreBtn = document.querySelector('.cards__button');
 const statContainer = document.querySelector('.statistic__container');
 const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://praktikum.tk/news/v2';
 const CURRENT_DATE = new Date();
 const DAY_MS = 86400000;
 const WEEK_AGO_DATE = new Date(CURRENT_DATE.getTime() - (DAY_MS * 7));
+
 
 const CONFIG_NEWS = {
   url: `${isDev}/everything`,
@@ -83,5 +85,6 @@ export {
   youAsked,
   weeklyNews,
   references,
-  statContainer
+  statContainer,
+  showMoreBtn
 }
