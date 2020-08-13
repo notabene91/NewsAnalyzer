@@ -13,6 +13,7 @@ const showMoreButton = document.querySelector('.cards__button');
 const youAsked = document.querySelector('.asked__title');
 const weeklyNews = document.querySelector('.weeklynews');
 const references = document.querySelector('.references');
+const month = document.querySelector('.month')
 const showMoreBtn = document.querySelector('.cards__button');
 const statContainer = document.querySelector('.statistic__container');
 const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://praktikum.tk/news/v2';
@@ -85,6 +86,7 @@ export {
   youAsked,
   weeklyNews,
   references,
+  month,
   statContainer,
   showMoreBtn
 }

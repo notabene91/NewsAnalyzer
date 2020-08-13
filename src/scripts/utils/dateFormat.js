@@ -16,7 +16,26 @@ export function formatPublishedDate(date) {
   return date.map((article) => {
     return new Date(article.publishedAt).getDate()
   })
+}
 
+//Функция форматирующая месяц публикации
+export function formatPublishedMonth(date) {
+  let onlyMonth = date.split('.')[1]
+  switch (onlyMonth) {
+    case `01`: onlyMonth = "январь"; break;
+    case `02`: onlyMonth = "февраль"; break;
+    case `03`: onlyMonth = "март"; break;
+    case `04`: onlyMonth = "апрель"; break;
+    case `05`: onlyMonth = "май"; break;
+    case `06`: onlyMonth = "июнь"; break;
+    case `07`: onlyMonth = "июль"; break;
+    case `08`: onlyMonth = "август"; break;
+    case `09`: onlyMonth = "сентябрь"; break;
+    case `10`: onlyMonth = "октябрь"; break;
+    case `11`: onlyMonth = "ноябрь"; break;
+    case `12`: onlyMonth = "декабрь"; break;
+  }
+  return onlyMonth
 }
 
 //Функция, заменяющая названия месяцев на прописной вариант
