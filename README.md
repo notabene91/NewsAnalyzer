@@ -7,7 +7,7 @@ https://notabene91.github.io/NewsAnalyzer/
 `HTML,CSS,JS, Webpack`
 
 ### Версия:  
-0.0.1
+0.0.2
 
 ### Функционал: 
 Проект позволяет посмотреть сводку новостей по заданной  
