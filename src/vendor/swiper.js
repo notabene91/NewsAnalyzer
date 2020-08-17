@@ -11,7 +11,6 @@ export let mySwiper = new Swiper(slider, {
   keyboard: true,
   centeredSlides: true,
   grabCursor: true,
-  freeMode: true,
 
   pagination: {
     el: '.swiper-pagination',
@@ -24,12 +23,10 @@ export let mySwiper = new Swiper(slider, {
   },
   breakpoints: {
     320: {
-      freeMode: false,
       slidesPerView: 1,
       spaceBetween: 8,
     },
     375: {
-      freeMode: true,
       slidesPerView: 1,
       spaceBetween: 8,
     },

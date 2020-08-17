@@ -16,7 +16,7 @@ const references = document.querySelector('.references');
 const month = document.querySelector('.month')
 const showMoreBtn = document.querySelector('.cards__button');
 const statContainer = document.querySelector('.statistic__container');
-const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://praktikum.tk/news/v2';
+const isDev = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://nomoreparties.co/news/v2';
 const CURRENT_DATE = new Date();
 const DAY_MS = 86400000;
 const WEEK_AGO_DATE = new Date(CURRENT_DATE.getTime() - (DAY_MS * 7));
