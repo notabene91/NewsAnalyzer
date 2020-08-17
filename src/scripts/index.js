@@ -28,7 +28,7 @@ import {
     if (!localStorage.input) {
       searchButton.setAttribute('disabled', true);
     }
-    if (localStorage.cards) {
+    else if (localStorage.cards) {
       cardsSection.classList.add('cards_visible');
       newsCardList.render(sliceCards(dataStorage.parseItem('cards').articles)[0]);
     }
@@ -50,6 +50,7 @@ import {
         dataStorage.setItem('input', input.value);
         if (res.totalResults === 0) {
           notFound.classList.add('not-found_visible');
+          cardsSection.classList.remove('cards_visible');
         }
         else {
           notFound.classList.remove('not-found_visible');
